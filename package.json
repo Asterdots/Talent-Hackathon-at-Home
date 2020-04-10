@@ -1,0 +1,19 @@
+{
+  "name": "talent-hackathon-at-home",
+  "version": "1.0.0",
+  "description": "[Descripción del proyecto](https://drive.google.com/drive/folders/1fLKhaHupwq8reOTEhRVencUV5oAW8U8C \"Encartgo\")",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asterdots/Talent-Hackathon-at-Home.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asterdots/Talent-Hackathon-at-Home/issues"
+  },
+  "homepage": "https://github.com/Asterdots/Talent-Hackathon-at-Home#readme"
+}
