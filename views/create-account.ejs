@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encartgo | Regístrate</title>
+    <link rel="stylesheet" href="/styles/css/styles.css">
+</head>
+<body>
+    <% if (locals.messages) { %>
+        <% const category = Object.keys(locals.messages) %>
+        <% if (category.length) { %>
+            <% locals.messages[category].forEach(element => { %>
+                <p><%= element %></p> 
+            <% }) %>
+        <% } %>   
+      <% } %>  
+    <section class="register__main">
+        <h2 id="register_title">Regístrate</h2>
+        <form action="" method="POST">
+            <label class="label" for="">Nombre*</label>
+            <input class="input" name="name" type="text" required placeholder="Nombre">
+            <label class="label" for="">Apellido*</label>
+            <input class="input" name="lastName" type="text" required placeholder="Apellido">
+            <label class="label" for="">Correo electrónico*</label>
+            <input class="input" name="email" type="text" required placeholder="example@mail.com">
+            <label class="label" for="">Contraseña*</label>
+            <input class="input" name="password"type="password" required placeholder="Contraseña">
+            <label class="label" for="">Confirmar contraseña*</label>
+            <input class="input" name="confirmPass" type="password" required placeholder="Confirma tu contraseña">
+            <button class="button" type="submit">Crear Cuenta</button>
+        </form>
+    </section>
+    <script src="/js/registro.js"></script>
+</body>
+</html>
