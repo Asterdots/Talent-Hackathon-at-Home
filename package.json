@@ -1,0 +1,26 @@
+{
+  "name": "encartgo",
+  "version": "1.0.0",
+  "description": "Backend for encartgo project",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asterdots/Talent-Hackathon-at-Home.git"
+  },
+  "author": "Asterdots",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Asterdots/Talent-Hackathon-at-Home/issues"
+  },
+  "homepage": "https://github.com/Asterdots/Talent-Hackathon-at-Home#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
