@@ -2,9 +2,11 @@ const express = require('express');
 const expressValidator = require('express-validator');
 const flash = require('connect-flash');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
 require('dotenv').config({path: 'variables.env'});
 const bodyParser = require('body-parser');
 const path = require('path');
+const passport = require('./config/passport');
 const routes = require('./routes/routes');
 
 // DB config
@@ -31,6 +33,9 @@ app.set('views', path.join(__dirname, './views'));
 // static files
 app.use(express.static('public'));
 
+// cookie parser config (the sessions create cookies)
+app.use(cookieParser());
+
 // Flash needs session, we create the sessions with their signs
 app.use(session({
   secret: process.env.SECRET,
@@ -38,6 +43,10 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }));
+
+// passport config
+app.use(passport.initialize());
+app.use(passport.session());
 
 // flash config
 app.use(flash());
