@@ -21,6 +21,7 @@
     "node-sass": "^4.13.1"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.4.1"
+    "@glidejs/glide": "^3.4.1",
+    "axios": "^0.19.2"
   }
 }

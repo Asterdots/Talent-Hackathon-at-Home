@@ -96,3 +96,17 @@ figcaption {
     font-size: 0.75rem;
     font-weight: 800;
 }
+
+// Main Banner Home stylign
+.main__banner {
+    border-radius: 10px;
+
+    @media (max-width: 769px){
+        margin-top: 5%;
+        height: 13rem;
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

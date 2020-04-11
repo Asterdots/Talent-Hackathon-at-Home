@@ -232,6 +232,17 @@ figcaption {
   font-size: 0.75rem;
   font-weight: 800; }
 
+.main__banner {
+  border-radius: 10px; }
+  @media (max-width: 769px) {
+    .main__banner {
+      margin-top: 5%;
+      height: 13rem;
+      width: 85%;
+      display: flex;
+      justify-content: center;
+      align-items: center; } }
+
 * {
   margin: 0 auto;
   overflow-x: hidden;
