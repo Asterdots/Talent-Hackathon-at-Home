@@ -56,33 +56,37 @@ header {
 //Categories Carousel
 .carousel__category{
     margin-top: 1.5%;
+    text-align: center;
+    justify-content: center;
+
     @media(max-width: 769px){
         margin-top: 4%;
     }
 }
 
 .carousel__pic {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 50px;
+    font-weight: 800;
 
     &-2 {
         transform: rotate(45deg);
-        width: 60px;
-        height: 60px;
-    }
-
-    &-3 {
-        width: 55px;
-        height: 55px;
-    }
-
-    &-4 {
         width: 50px;
         height: 50px;
     }
 
-    &-5 {
+    &-3 {
         width: 50px;
+        height: 50px;
+    }
+
+    &-4 {
+        width: 45px;
+        height: 50px;
+    }
+
+    &-5 {
+        width: 45px;
         height: 50px;
     }
 }
