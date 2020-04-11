@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="../styles/css/styles.css" type="text/css">
+    <!-- CDN links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Required Modules -->
+    <link rel="stylesheet" href="../node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="../node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+    <title>encartgo | ¡Ordena Ya!</title>
+</head>
+<body>
+    <!-- Bottom Navbar -->
+    <nav>
+        <span>
+            <i class="fas fa-store fa-lg"></i>
+            <p>Tienda</p>
+        </span>
+        <span>
+            <i class="fas fa-shopping-bag fa-lg"></i>
+            <p>Orden</p>
+        </span>
+        <span>
+            <i class="fas fa-search fa-lg"></i>
+            <p>Buscar</p>
+        </span>
+        <span>
+            <i class="fas fa-user fa-lg"></i>
+            <p>Perfil</p>
+        </span>
+    </nav>
+
+    <!-- Location Status Header -->
+    <header>
+        <div>
+            <span>Enviar a <i class="fas fa-caret-down"></i></span><br />
+            <!-- Insert location response through API comunication -->
+            <span class="location">
+                <i class="fas fa-map-marker-alt"></i> 
+                Alameda Centro,Guanajuato
+            </span>
+        </div>
+    </header>
+
+    <!-- Categories Carousel -->
+    <div class="carousel__category">
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                    <figure>
+                        <img class="carousel__pic" src="../assets/pizza.png" alt="fastfood"/>
+                        <figcaption>Comida Rápida</figcaption>
+                    </figure>
+                </li>
+                <li class="glide__slide">
+                    <figure>
+                        <img class="carousel__pic-2" src="../assets/can.png" alt="fastfood"/>
+                        <figcaption>Bebidas</figcaption>
+                    </figure>
+                </li>
+                <li class="glide__slide">
+                    <figure>
+                        <img class="carousel__pic-3" src="../assets/pills.png" alt="fastfood"/>
+                        <figcaption>Farmacia</figcaption>
+                    </figure>
+                </li>
+                <li class="glide__slide">
+                    <figure>
+                        <img class="carousel__pic-4" src="../assets/bag.png" alt="fastfood"/>
+                        <figcaption>Súper</figcaption>
+                    </figure>
+                </li>
+                <li class="glide__slide">
+                    <figure>
+                        <img class="carousel__pic-5" src="../assets/book.png" alt="fastfood"/>
+                        <figcaption>Libros</figcaption>
+                    </figure>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="../js/home.js"></script>
+    <script>
+        let glide = new Glide('.glide', { autoplay: 4000});
+        glide.mount();
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+//Bottom navbar styles -- Mobile approch
+nav {
+    bottom: 0;
+    height: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0,0,0,0.15) 0px -3px 8px;
+    -webkit-box-shadow: rgba(0,0,0,0.15) 0px -3px 8px;
+    -moz-box-shadow: rgba(0,0,0,0.15) 0px -3px 8px;
+
+    & > span  {
+        font-size: 0.75rem;
+        font-weight: 800;
+        color: $light-gray;
+        text-align: center;
+        cursor: pointer;
+
+        &:nth-child(1) {
+            color: $ocean-blue;
+        }
+    }
+}
+
+//Top location status header
+header {
+    background-color: $ocean-blue;
+    height: 4rem;
+    text-align: center;
+
+    & > div:nth-child(1){
+        color: #000;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        @media (max-width: 769px){
+            margin-top: 2.5%;
+        }
+    }
+}
+
+//Real location string
+.location {
+    color: $gray;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+//Categories Carousel
+.carousel__category{
+    margin-top: 1.5%;
+    @media(max-width: 769px){
+        margin-top: 4%;
+    }
+}
+
+.carousel__pic {
+    width: 60px;
+    height: 60px;
+
+    &-2 {
+        transform: rotate(45deg);
+        width: 60px;
+        height: 60px;
+    }
+
+    &-3 {
+        width: 55px;
+        height: 55px;
+    }
+
+    &-4 {
+        width: 50px;
+        height: 50px;
+    }
+
+    &-5 {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+// Item description
+figcaption {
+    font-size: 0.75rem;
+    font-weight: 800;
+}

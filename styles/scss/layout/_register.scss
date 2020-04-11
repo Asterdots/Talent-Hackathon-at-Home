@@ -1,7 +1,3 @@
-$yellow: rgb(229, 202, 14);
-$light-gray: #c2c2c2;
-$gray: #555555;
-
 @mixin flex ($direction, $align, $justify) {
     display: flex;
     flex-direction: $direction;
@@ -9,7 +5,7 @@ $gray: #555555;
     justify-items: $justify;
 }
 @mixin form {
-    @include flex(column, center, center)
+    @include flex(column, center, center);
     width: 90%;
     height: auto;
     @media screen and (min-width: 700px) {
@@ -21,7 +17,7 @@ $gray: #555555;
     height: 100vh;
     box-sizing: border-box;
     padding: 60px 0px;
-    @include flex(column, center, center)
+    @include flex(column, center, center);
 }
 .register__main {
     @include logmain();

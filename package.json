@@ -4,16 +4,23 @@
   "description": "[Descripción del proyecto](https://drive.google.com/drive/folders/1fLKhaHupwq8reOTEhRVencUV5oAW8U8C \"Encartgo\")",
   "main": "index.js",
   "scripts": {
-    "start": "live-server"
+    "start": "live-server",
+    "compile:sass": "node-sass styles/scss/styles.scss styles/css/styles.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Asterdots/Talent-Hackathon-at-Home.git"
   },
-  "author": "",
+  "author": "Asterdots",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Asterdots/Talent-Hackathon-at-Home/issues"
   },
-  "homepage": "https://github.com/Asterdots/Talent-Hackathon-at-Home#readme"
+  "homepage": "https://github.com/Asterdots/Talent-Hackathon-at-Home#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1"
+  }
 }
