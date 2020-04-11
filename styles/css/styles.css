@@ -169,8 +169,10 @@ nav {
   justify-content: center;
   overflow: hidden;
   position: fixed;
+  z-index: 1;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.15) 0px -3px 8px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px -3px 8px;
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px -3px 8px; }
@@ -186,7 +188,11 @@ nav {
 header {
   background-color: #01c4c8;
   height: 4rem;
-  text-align: center; }
+  text-align: center;
+  top: 0;
+  z-index: 1;
+  position: fixed;
+  width: 100%; }
   header > div:nth-child(1) {
     color: #000;
     font-size: 1rem;
@@ -206,9 +212,12 @@ header {
   margin-top: 1.5%;
   text-align: center;
   justify-content: center; }
-  @media (max-width: 769px) {
+  @media (min-width: 320px) and (max-width: 369px) {
     .carousel__category {
-      margin-top: 4%; } }
+      margin-top: 25%; } }
+  @media (min-width: 370px) and (max-width: 769px) {
+    .carousel__category {
+      margin-top: 22%; } }
 
 .carousel__pic {
   width: 55px;
@@ -234,14 +243,39 @@ figcaption {
 
 .main__banner {
   border-radius: 10px; }
-  @media (max-width: 769px) {
+  @media (min-width: 370px) and (max-width: 769px) {
     .main__banner {
       margin-top: 5%;
-      height: 13rem;
+      height: 11rem;
       width: 85%;
       display: flex;
       justify-content: center;
       align-items: center; } }
+  @media (min-width: 320px) and (max-width: 369px) {
+    .main__banner {
+      margin-top: 5%;
+      height: 9rem;
+      width: 85%;
+      display: flex;
+      justify-content: center;
+      align-items: center; } }
+
+.container {
+  display: flex;
+  justify-content: center; }
+  @media (min-width: 370px) and (max-width: 769px) {
+    .container > .item {
+      width: 85px;
+      height: 85px;
+      border-radius: 5px; } }
+  @media (min-width: 320px) and (max-width: 369px) {
+    .container > .item {
+      width: 75px;
+      height: 75px;
+      border-radius: 5px; } }
+
+.products {
+  margin-top: 5%; }
 
 * {
   margin: 0 auto;
