@@ -113,15 +113,25 @@
   justify-content: center;
   text-align: justify; }
   .user__edit form {
+    text-align: center;
     width: 90%; }
     .user__edit form h3 {
       color: #01c4c8;
       font-size: 20px;
       margin-bottom: 40px; }
-    .user__edit form label {
-      width: 100%; }
     .user__edit form button {
       margin-bottom: 40px; }
+      @media screen and (min-width: 600px) {
+        .user__edit form button {
+          width: 300px; } }
+    @media screen and (min-width: 700px) {
+      .user__edit form {
+        width: 600px; }
+        .user__edit form .user__form--mainInfo {
+          text-align: justify; }
+          .user__edit form .user__form--mainInfo label {
+            padding-left: 5px;
+            box-sizing: border-box; } }
 
 .user--adress {
   width: 100%;
@@ -133,7 +143,7 @@
 #input-adress {
   margin-bottom: 10px; }
 
-.user__form--nameInfo .edit--image {
+.user__form--nameInfo .user--image {
   background: #eaeaea;
   border-radius: 600px;
   width: 70%;
@@ -144,6 +154,9 @@
   justify-content: center;
   margin-top: 40px;
   margin-bottom: 40px; }
+  @media screen and (min-width: 600px) {
+    .user__form--nameInfo .user--image {
+      width: 300px; } }
 
 .login__main {
   width: 100%;

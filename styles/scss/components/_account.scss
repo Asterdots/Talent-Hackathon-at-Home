@@ -82,18 +82,30 @@
     @include flex(column, center, center);
     text-align: justify;
     form {
+        text-align: center;
         h3 {
             color: $ocean-blue;
             font-size: 20px;
             margin-bottom: 40px;
         }
         width: 90%;
-        label {
-            width: 100%;
-        }
         button {
             margin-bottom: 40px;
+            @media screen and (min-width:600px) {
+                width: 300px;
+            }
         }
+        @media screen and (min-width:700px) {
+            width: 600px;
+            .user__form--mainInfo {
+                text-align: justify;
+                label {
+                    padding-left: 5px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        
     }
 }
 .user--adress {
@@ -107,7 +119,7 @@
     margin-bottom: 10px;
 }
 .user__form--nameInfo {
-    .edit--image {
+    .user--image {
         background: #eaeaea;
         border-radius: 600px;
         width: 70%;
@@ -115,5 +127,8 @@
         @include flex(column, center, center);
         margin-top: 40px;
         margin-bottom: 40px;
+        @media screen and (min-width:600px) {
+            width: 300px;
+        }
     }
 }
