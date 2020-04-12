@@ -16,6 +16,13 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 1fr 1fr;
+    .user--adress {
+        margin-top: 30px;
+        width: 90%;
+        @media screen and (min-width: 700px) {
+            width: 600px;
+        }
+    }
 }
 .user__main--info {
     box-sizing: border-box;
@@ -29,7 +36,7 @@
         width: 60%;
         height: auto;
         @media screen and (min-width: 700px) {
-            width: 40%;
+            width: 30%;
         }
         @media screen and (min-width: 1000px) {
             width: 20%;
@@ -66,6 +73,7 @@
         width: 600px;
         background: #eaeaea;
         border-radius: 25px;
+        padding: 30px 0;
     }
     h3 {
         color: $ocean-blue;
