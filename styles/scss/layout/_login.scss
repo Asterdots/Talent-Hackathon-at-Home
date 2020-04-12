@@ -15,7 +15,7 @@
 }
 @mixin logmain {
     width: 100%;
-    height: 100vh;
+    height: auto;
     box-sizing: border-box;
     padding: 60px 0px;
     @include flex(column, center, center)

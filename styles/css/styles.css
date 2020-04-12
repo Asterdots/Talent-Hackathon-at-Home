@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 .label {
   font-size: 20px;
   text-align: justify;
@@ -161,9 +162,23 @@
     .user__form--nameInfo .user--image {
       width: 300px; } }
 
+.logo_asterdots {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .logo_asterdots img {
+    width: 100px; }
+  .logo_asterdots span {
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px; }
+
 .login__main {
   width: 100%;
-  height: 100vh;
+  height: auto;
   box-sizing: border-box;
   padding: 60px 0px;
   display: flex;
@@ -210,7 +225,8 @@
       .register__main form {
         background: #eaeaeaea;
         padding: 40px;
-        border-radius: 10px; } }
+        border-radius: 10px;
+        margin-bottom: 40px; } }
   .register__main h2 {
     margin-bottom: 60px;
     font-size: 30px;
