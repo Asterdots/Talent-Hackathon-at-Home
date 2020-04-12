@@ -5382,6 +5382,35 @@ var banner = new _glide.default('.glide__carousel', {
   autoplay: 7500
 });
 banner.mount(); // API functionality
+
+var ID = "WavvLdfdP6g8aZTtbBQHTw";
+var URL_PROVIDER = "https://api.yelp.com/v3/businesses/".concat(ID); // CORS Proxy Route
+
+var banner_img = document.getElementsByClassName("img__1");
+
+var refill = function refill() {
+  try {
+    // let res = await axios.get(URL_PROVIDER);
+    // console.log(res.data);
+    var res = fetch(URL_PROVIDER, {
+      mode: 'cors',
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    }).then(function (input) {
+      return console.log(input);
+    }).catch(function (input) {
+      return console.log("ERROR BY - ".concat(input));
+    });
+  } catch (_unused) {
+    console.log("An error ocurred");
+  } // let data = JSON.parse(res.data);
+  // banner_img.src = data["img_url"];
+  // console.log(data["img_url"]);
+
+};
+
+window.onload(refill());
 },{"@glidejs/glide":"node_modules/@glidejs/glide/dist/glide.esm.js","axios":"node_modules/axios/index.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -5410,7 +5439,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49162" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50406" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
