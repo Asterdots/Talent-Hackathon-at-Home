@@ -29,11 +29,22 @@
     color: $gray;
 }
 .button {
-    @include inputAndButtonAttributes(100%, auto, 16px 0, $yellow, 15px);
+    @include inputAndButtonAttributes(100%, auto, 16px 0, $ocean-blue, 15px);
      font-weight: bold;
+     outline: none;
      font-size: 15px;
+     color: $ocean-blue-dark;
      @media screen and (min-width: 700px) {
         width: auto;
         padding: 16px 36px;
     }
+    
+}
+.button:hover {
+        background: $ocean-blue-light;
+        color: white;
+}
+.button:active {
+    background: $light-gray;
+    color: $ocean-blue;
 }

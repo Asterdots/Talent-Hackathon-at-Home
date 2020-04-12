@@ -1,6 +1,4 @@
-$yellow: rgb(229, 202, 14);
-$light-gray: #c2c2c2;
-$gray: #555555;
+@import "../variables/colors";
 
 @mixin flex ($direction, $align, $justify) {
     display: flex;
@@ -18,6 +16,13 @@ $gray: #555555;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 1fr 1fr;
+    .user--adress {
+        margin-top: 30px;
+        width: 90%;
+        @media screen and (min-width: 700px) {
+            width: 600px;
+        }
+    }
 }
 .user__main--info {
     box-sizing: border-box;
@@ -31,7 +36,7 @@ $gray: #555555;
         width: 60%;
         height: auto;
         @media screen and (min-width: 700px) {
-            width: 40%;
+            width: 30%;
         }
         @media screen and (min-width: 1000px) {
             width: 20%;
@@ -41,7 +46,7 @@ $gray: #555555;
         }
     }
     p {
-        color: $yellow;
+        color: $ocean-blue;
         font-weight: bold;
         font-size: 30px;
         margin: 20px 0;
@@ -51,7 +56,13 @@ $gray: #555555;
         text-decoration: none;
         font-size: 20px;
     }
+    :hover {
+        color: #eaeaea;
+        text-decoration: underline;  
+    }
+    
 }
+
 .user--info {
     margin-top: 40px;
     width: 60%;
@@ -62,9 +73,10 @@ $gray: #555555;
         width: 600px;
         background: #eaeaea;
         border-radius: 25px;
+        padding: 30px 0;
     }
     h3 {
-        color: $yellow;
+        color: $ocean-blue;
         font-weight: bold;
         font-size: 25px;
         margin-bottom: 20px;
@@ -78,5 +90,61 @@ $gray: #555555;
         color: #777777;
         font-size: 20px;
         margin-bottom: 40px;
+    }
+}
+
+//User edit information page----
+.user__edit {
+    @include flex(column, center, center);
+    text-align: justify;
+    form {
+        text-align: center;
+        h3 {
+            color: $ocean-blue;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        width: 90%;
+        button {
+            margin-bottom: 40px;
+            @media screen and (min-width:600px) {
+                width: 300px;
+            }
+        }
+        @media screen and (min-width:700px) {
+            width: 600px;
+            .user__form--mainInfo {
+                text-align: justify;
+                label {
+                    padding-left: 5px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        
+    }
+}
+.user--adress {
+    width: 100%;
+    height: 250px;
+    background: #eaeaea;
+    margin-bottom: 40px;
+    border-radius: 15px;
+}
+#input-adress {
+    margin-bottom: 10px;
+}
+.user__form--nameInfo {
+    .user--image {
+        background: #eaeaea;
+        border-radius: 600px;
+        width: 70%;
+        overflow: hidden;
+        @include flex(column, center, center);
+        margin-top: 40px;
+        margin-bottom: 40px;
+        @media screen and (min-width:600px) {
+            width: 300px;
+        }
     }
 }

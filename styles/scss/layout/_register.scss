@@ -1,3 +1,4 @@
+@import "../variables/colors";
 @mixin flex ($direction, $align, $justify) {
     display: flex;
     flex-direction: $direction;
@@ -27,11 +28,12 @@
             background: #eaeaeaea;
             padding: 40px;
             border-radius: 10px;
+            margin-bottom: 40px;
         }
     }
     h2 {
         margin-bottom: 60px;
         font-size: 30px;
-        color: $yellow;
+        color: $ocean-blue;
     }
 }
