@@ -77,6 +77,9 @@
     color: #555555;
     text-decoration: none;
     font-size: 20px; }
+  .user__main--info :hover {
+    color: #eaeaea;
+    text-decoration: underline; }
 
 .user--info {
   margin-top: 40px;

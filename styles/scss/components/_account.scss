@@ -49,7 +49,13 @@
         text-decoration: none;
         font-size: 20px;
     }
+    :hover {
+        color: #eaeaea;
+        text-decoration: underline;  
+    }
+    
 }
+
 .user--info {
     margin-top: 40px;
     width: 60%;
@@ -78,6 +84,8 @@
         margin-bottom: 40px;
     }
 }
+
+//User edit information page----
 .user__edit {
     @include flex(column, center, center);
     text-align: justify;
