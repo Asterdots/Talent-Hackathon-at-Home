@@ -32,7 +32,8 @@
   border-radius: 15px;
   font-weight: bold;
   outline: none;
-  font-size: 15px; }
+  font-size: 15px;
+  color: #003f40; }
   @media screen and (min-width: 700px) {
     .button {
       width: auto;
@@ -202,9 +203,10 @@
   align-items: center;
   justify-items: center; }
   .login__main img {
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    width: 300px; }
   .login__main h2 {
-    color: #01c4c8;
+    color: #007d80;
     margin-bottom: 40px;
     font-size: 30px; }
   .login__main form {

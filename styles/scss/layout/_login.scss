@@ -25,9 +25,10 @@
     @include logmain();
     img {
         margin-bottom: 60px;
+        width: 300px;
     }
     h2 {
-        color: $ocean-blue;
+        color: $ocean-blue-medium;
         margin-bottom: 40px;
         font-size: 30px;
     }
