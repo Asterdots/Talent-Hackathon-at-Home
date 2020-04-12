@@ -1,13 +1,20 @@
-$yellow: rgb(229, 202, 14);
-$light-gray: #c2c2c2;
-$gray: #555555;
-
-@import "components/login.scss";
-@import "components/register";
+//Components
 @import "components/inputsAndButtons";
+@import "components/account";
+@import "components/logoAsterdots";
+
+//Layout
+@import "layout/login";
+@import "layout/register";
+@import "layout/home";
+
+// Colours
+@import "variables/colors";
 
 * {
     margin: 0 auto;
+    overflow-x: hidden;
+    font-family: 'JetBrains Mono';
 }
 
 

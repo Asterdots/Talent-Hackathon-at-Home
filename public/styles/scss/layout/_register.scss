@@ -1,7 +1,4 @@
-$yellow: rgb(229, 202, 14);
-$light-gray: #c2c2c2;
-$gray: #555555;
-
+@import "../variables/colors";
 @mixin flex ($direction, $align, $justify) {
     display: flex;
     flex-direction: $direction;
@@ -9,7 +6,7 @@ $gray: #555555;
     justify-items: $justify;
 }
 @mixin form {
-    @include flex(column, center, center)
+    @include flex(column, center, center);
     width: 90%;
     height: auto;
     @media screen and (min-width: 700px) {
@@ -18,10 +15,10 @@ $gray: #555555;
 }
 @mixin logmain {
     width: 100%;
-    height: 100vh;
+    height: auto;
     box-sizing: border-box;
     padding: 60px 0px;
-    @include flex(column, center, center)
+    @include flex(column, center, center);
 }
 .register__main {
     @include logmain();
@@ -31,11 +28,12 @@ $gray: #555555;
             background: #eaeaeaea;
             padding: 40px;
             border-radius: 10px;
+            margin-bottom: 40px;
         }
     }
     h2 {
         margin-bottom: 60px;
         font-size: 30px;
-        color: $yellow;
+        color: $ocean-blue;
     }
 }

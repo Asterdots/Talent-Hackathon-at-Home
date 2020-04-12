@@ -1,0 +1,168 @@
+//Bottom navbar styles -- Mobile approch
+nav {
+    bottom: 0;
+    height: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: rgba(0,0,0,0.15) 0px -3px 8px;
+    -webkit-box-shadow: rgba(0,0,0,0.15) 0px -3px 8px;
+    -moz-box-shadow: rgba(0,0,0,0.15) 0px -3px 8px;
+
+    & > span  {
+        font-size: 0.75rem;
+        font-weight: 800;
+        color: $light-gray;
+        text-align: center;
+        cursor: pointer;
+
+        &:nth-child(1) {
+            color: $ocean-blue;
+        }
+    }
+}
+
+//Top location status header
+header {
+    background-color: $ocean-blue;
+    height: 4rem;
+    text-align: center;
+    top: 0;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+
+    & > div:nth-child(1){
+        color: #000;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        @media (max-width: 769px){
+            margin-top: 2.5%;
+        }
+    }
+}
+
+//Real location string
+.location {
+    color: $gray;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+//Categories Carousel
+.carousel__category{
+    margin-top: 1.5%;
+    text-align: center;
+    justify-content: center;
+
+    @media (min-width: 320px) and (max-width: 369px){
+        margin-top: 25%;
+    }
+
+    @media (min-width: 370px ) and (max-width: 769px){
+        margin-top: 22%;
+    }
+}
+
+.carousel__pic {
+    width: 55px;
+    height: 50px;
+    font-weight: 800;
+    cursor: pointer;
+
+    &-2 {
+        transform: rotate(45deg);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    &-3 {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    &-4 {
+        width: 45px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    &-5 {
+        width: 45px;
+        height: 50px;
+        cursor: pointer;
+    }
+}
+
+// Item description
+figcaption {
+    font-size: 0.75rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+// Main Banner Home stylign
+.main__banner {
+    border-radius: 10px;
+
+    @media (min-width: 370px ) and (max-width: 769px){
+        margin-top: 5%;
+        height: 11rem;
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (min-width: 320px) and (max-width: 369px){
+        margin-top: 5%;
+        height: 9rem;
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// Items row section
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+
+    & > .item {
+        @media (min-width: 370px ) and (max-width: 769px){
+            width: 85px;
+            height: 85px;
+            border-radius: 5px;
+        }
+
+        @media (min-width: 320px) and (max-width: 369px){
+            width: 75px;
+            height: 75px;
+            border-radius: 5px;
+        }
+    }
+}
+
+.products {
+    margin-top: 5%;
+
+    & > p {
+        font-size: 0.95rem;
+        font-weight: 600;
+        padding-left: 20px; 
+    }
+}

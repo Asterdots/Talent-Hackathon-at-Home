@@ -17,5 +17,11 @@ module.exports = () => {
     appControllers.home
   );
 
+  // edit profile
+  router.get('/edit-profile/:userID',
+    authControllers.isAuthenticated,
+    userControllers.showEditProfile
+  );
+
   return router;
 };

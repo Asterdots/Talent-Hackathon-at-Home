@@ -1,0 +1,19 @@
+@import "../variables/colors";
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+.logo_asterdots {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+        width: 100px;
+    }
+    span {
+        font-family: 'Russo One', sans-serif;
+        font-size: 25px;
+    }
+}

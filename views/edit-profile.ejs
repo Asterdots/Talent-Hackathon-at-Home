@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encartgo | Editar perfil</title>
+    <link rel="stylesheet" href="/styles/css/styles.css">
+</head>
+<body>
+    <section class="user__edit">
+         <form action="">
+            <div class="user__form--nameInfo">
+                <div class="user--image">
+                    <img src="/assets/Profile.png" alt="profile image">
+                </div>
+                <input class="input" type="text" value="<%= userDB.name %> " placeholder="Name">
+                <input class="input" type="text" value="<%= userDB.lastName %> " placeholder="Apellido">
+            </div>
+            <div class="user__form--mainInfo">
+                <h3>Información</h3>
+                <input class="input" type="text" placeholder="Nombre de tu negocio">
+                <h3>Dirección</h3>
+                <input id="input-adress" class="input" type="text" placeholder="Pon tu dirección">
+                <div class="user--adress"></div>
+                <h3>Imagen de perfil</h3>
+                <input class="input" type="file">
+            </div>
+            <button class="button">Aceptar</button>
+        </form>
+    </section>
+</body>
+</html>

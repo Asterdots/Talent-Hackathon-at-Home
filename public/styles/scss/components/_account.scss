@@ -1,0 +1,150 @@
+@import "../variables/colors";
+
+@mixin flex ($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+.user__main {
+    height: auto;
+    box-sizing: border-box;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    .user--adress {
+        margin-top: 30px;
+        width: 90%;
+        @media screen and (min-width: 700px) {
+            width: 600px;
+        }
+    }
+}
+.user__main--info {
+    box-sizing: border-box;
+    width: 90%;
+    @include flex(column, center, center);
+    .user--image {
+        background: #eaeaea;
+        box-sizing: border-box;
+        border-radius: 200px;
+        overflow: hidden;
+        width: 60%;
+        height: auto;
+        @media screen and (min-width: 700px) {
+            width: 30%;
+        }
+        @media screen and (min-width: 1000px) {
+            width: 20%;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    p {
+        color: $ocean-blue;
+        font-weight: bold;
+        font-size: 30px;
+        margin: 20px 0;
+    }
+    a {
+        color: $gray;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    :hover {
+        color: #eaeaea;
+        text-decoration: underline;  
+    }
+    
+}
+
+.user--info {
+    margin-top: 40px;
+    width: 60%;
+    box-sizing: border-box;
+    @include flex(column, center, center);
+    text-align: justify;
+    @media screen and (min-width: 700px) {
+        width: 600px;
+        background: #eaeaea;
+        border-radius: 25px;
+        padding: 30px 0;
+    }
+    h3 {
+        color: $ocean-blue;
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    span {
+        color: $gray;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    p {
+        color: #777777;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+//User edit information page----
+.user__edit {
+    @include flex(column, center, center);
+    text-align: justify;
+    form {
+        text-align: center;
+        h3 {
+            color: $ocean-blue;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        width: 90%;
+        button {
+            margin-bottom: 40px;
+            @media screen and (min-width:600px) {
+                width: 300px;
+            }
+        }
+        @media screen and (min-width:700px) {
+            width: 600px;
+            .user__form--mainInfo {
+                text-align: justify;
+                label {
+                    padding-left: 5px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        
+    }
+}
+.user--adress {
+    width: 100%;
+    height: 250px;
+    background: #eaeaea;
+    margin-bottom: 40px;
+    border-radius: 15px;
+}
+#input-adress {
+    margin-bottom: 10px;
+}
+.user__form--nameInfo {
+    .user--image {
+        background: #eaeaea;
+        border-radius: 600px;
+        width: 70%;
+        overflow: hidden;
+        @include flex(column, center, center);
+        margin-top: 40px;
+        margin-bottom: 40px;
+        @media screen and (min-width:600px) {
+            width: 300px;
+        }
+    }
+}

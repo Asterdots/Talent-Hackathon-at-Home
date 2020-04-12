@@ -1,3 +1,5 @@
+@import "../variables/colors";
+
 @mixin inputAndButtonAttributes($width, $height, $padding, $bg, $border) {
     width: $width;
     height: $height;
@@ -27,7 +29,7 @@
     color: $gray;
 }
 .button {
-    @include inputAndButtonAttributes(100%, auto, 16px 0, $yellow, 15px)
+    @include inputAndButtonAttributes(100%, auto, 16px 0, $ocean-blue, 15px);
      font-weight: bold;
      font-size: 15px;
      @media screen and (min-width: 700px) {

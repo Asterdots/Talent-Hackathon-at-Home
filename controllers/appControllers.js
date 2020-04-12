@@ -1,3 +1,6 @@
 exports.home = (req, res) => {
-  res.send('Ya estás dentro prro');
+  const userID = req.user.id;
+  res.render('home', {
+    userID
+  });
 };

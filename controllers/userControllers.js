@@ -10,6 +10,7 @@ exports.createAccount = async (req, res) => {
   // Express validator to confirm the passwords
   req.checkBody('confirmPass', 'Las contraseñas con coinciden').equals(req.body.password);
   const expressErrorsList = req.validationErrors();
+  console.log(user);
 
   try {
     // Check if there are errors from express-validator
@@ -36,4 +37,14 @@ exports.createAccount = async (req, res) => {
 
 exports.showLogIn = (req, res) => {
   res.render('log-in');
+};
+
+exports.showEditProfile = async (req, res, next) => {
+  if (req.user.id === req.params.userID) {
+    const userDB = await Users.findOne({where: {id: req.user.id}});
+    res.render('edit-profile', {
+      userDB
+    });
+    return next();
+  }
 };
