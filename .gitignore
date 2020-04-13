@@ -1,4 +1,3 @@
 node_modules/
 z.ejs
-public/uploads/profiles/*
-public/uploads/products/*
+.idea/
