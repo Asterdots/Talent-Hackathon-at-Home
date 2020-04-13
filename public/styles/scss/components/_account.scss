@@ -152,3 +152,9 @@
         }
     }
 }
+
+.inherit-4 {
+    & > a:nth-child(4) {
+        color: $ocean-blue;
+    }
+}

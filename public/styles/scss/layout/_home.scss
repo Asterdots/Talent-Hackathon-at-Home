@@ -35,6 +35,12 @@ nav {
     }
 }
 
+.inherit {
+    & > a:nth-child(1) {
+        color: $ocean-blue;
+    }
+}
+
 //Top location status header
 header {
     background-color: $ocean-blue;

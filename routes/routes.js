@@ -38,5 +38,14 @@ module.exports = () => {
     productControllers.productsPanel
   );
 
+  // demo routes
+  router.get('/show-store', 
+    appControllers.showStore
+  );
+
+  router.get('/store-orders-list',
+    appControllers.showStoreOrdersList
+  );
+
   return router;
 };

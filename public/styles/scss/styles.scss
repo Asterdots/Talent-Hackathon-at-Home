@@ -2,6 +2,7 @@
 @import "components/inputsAndButtons";
 @import "components/account";
 @import "components/logoAsterdots";
+@import "components/ordered";
 
 //Layout
 @import "layout/login";
@@ -9,6 +10,9 @@
 @import "layout/home";
 @import "layout/search";
 @import "layout/inventory";
+@import "layout/product";
+@import "layout/commerce";
+@import "layout/seller";
 
 // Colors
 @import "variables/colors";

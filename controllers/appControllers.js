@@ -4,3 +4,11 @@ exports.home = (req, res) => {
     userID
   });
 };
+
+exports.showStore = (req, res) => {
+  res.render('show-store');
+};
+
+exports.showStoreOrdersList = (req, res) => {
+  res.render('store-orders-list');
+};
