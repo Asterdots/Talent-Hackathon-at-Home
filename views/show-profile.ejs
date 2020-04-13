@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encartgo | <%= userDB.name %> </title>
+    <link rel="stylesheet" href="/styles/css/styles.css">
+</head>
+<body>
+    <section class="user__main">
+        <div class="user__main--info">
+          <% if (userDB.image) { %>
+            <div class="user--image">
+                <img src="/uploads/profiles/<%= userDB.image %>" width="400px" alt="profile image">
+            </div>
+          <% } %>
+            <p><%= userDB.name %> </p>
+            <a href="/edit-profile/<%= userDB.id %> ">Editar Perfil</a>
+        </div>
+        <div class="user--info">
+            <h3>Información</h3>
+            <span>Correo</span>
+            <p><%= userDB.email %> </p>
+            <span>Dirección</span>
+            <p><%= userDB.address %> </p>
+            <span>Negocio</span>
+            <p><%= userDB.bussiness %> </p>
+        </div>
+        <div class="user--adress"></div>
+    </section> 
+</body>
+</html>

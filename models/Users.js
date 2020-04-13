@@ -43,6 +43,8 @@ const Users = db.define('Users', {
       notEmpty: {msg: 'La contraseña no puede ir vacía'}
     }
   },
+  bussiness: Sequelize.STRING,
+  image: Sequelize.TEXT,
   tokenPass: Sequelize.STRING,
   tokenDate: Sequelize.DATE
 }, {

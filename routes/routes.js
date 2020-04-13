@@ -22,6 +22,16 @@ module.exports = () => {
     authControllers.isAuthenticated,
     userControllers.showEditProfile
   );
+  router.post('/edit-profile/:userID',
+    authControllers.isAuthenticated,
+    userControllers.uploadProfileImage,
+    userControllers.editProfile
+  );
+
+  // show profile
+  router.get('/show-profile/:userID',
+    userControllers.showProfile
+  );
 
   return router;
 };
