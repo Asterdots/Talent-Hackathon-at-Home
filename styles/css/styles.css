@@ -47,6 +47,9 @@
   background: #c2c2c2;
   color: #01c4c8; }
 
+.bottom {
+  margin-top: 8%; }
+
 .user__main {
   height: auto;
   box-sizing: border-box;
@@ -179,6 +182,9 @@
     .user__form--nameInfo .user--image {
       width: 300px; } }
 
+.inherit-4 > a:nth-child(4) {
+  color: #01c4c8; }
+
 .logo_asterdots {
   width: 100%;
   height: auto;
@@ -265,14 +271,20 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.15) 0px -3px 8px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px -3px 8px;
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px -3px 8px; }
-  nav > span {
+  nav > a {
     font-size: 0.75rem;
     font-weight: 800;
     color: #c2c2c2;
     text-align: center;
+    text-decoration: none;
     cursor: pointer; }
-    nav > span:nth-child(1) {
+    nav > a:active {
       color: #01c4c8; }
+    nav > a:hover {
+      color: #c2c2c2; }
+
+.inherit > a:nth-child(1) {
+  color: #01c4c8; }
 
 header {
   background-color: #01c4c8;
@@ -376,6 +388,37 @@ figcaption {
     font-size: 0.95rem;
     font-weight: 600;
     padding-left: 20px; }
+
+.inherit-3 > a:nth-child(3) {
+  color: #01c4c8; }
+
+.container > h1 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #000;
+  margin-top: 30%; }
+
+.container > input {
+  background-color: #c2c2c2;
+  border: none;
+  border-radius: 8px;
+  height: 3.5rem;
+  margin-top: 3%;
+  font-size: 1.25rem; }
+  .container > input::placeholder {
+    font-size: 1.25rem;
+    font-family: 'JetBrains Mono'; }
+  .container > input:focus {
+    outline: none; }
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%; }
+  .divider > hr {
+    width: 70%;
+    background-color: #c2c2c2; }
 
 .inventory__main {
   width: 100%;

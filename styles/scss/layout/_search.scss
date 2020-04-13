@@ -1,0 +1,45 @@
+// Styling
+.inherit-3 {
+    & > a:nth-child(3) {
+        color: $ocean-blue;
+    }
+}
+
+.container {
+    & > h1 {
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #000;
+        margin-top: 30%;
+    }
+
+    & > input {
+        background-color: $light-gray;
+        border: none;
+        border-radius: 8px;
+        height: 3.5rem;
+        margin-top: 3%;
+        font-size: 1.25rem;
+
+        &::placeholder {
+            font-size: 1.25rem;
+            font-family: 'JetBrains Mono';
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+
+    & > hr {
+        width: 70%;
+        background-color: $light-gray;
+    }
+}

@@ -7,6 +7,10 @@
     justify-content: $justify;
 }
 
+.bottom {
+    margin-top: 8%;
+}
+
 .user__main {
     height: auto;
     box-sizing: border-box;
@@ -146,5 +150,11 @@
         @media screen and (min-width:600px) {
             width: 300px;
         }
+    }
+}
+
+.inherit-4 {
+    & > a:nth-child(4) {
+        color: $ocean-blue;
     }
 }

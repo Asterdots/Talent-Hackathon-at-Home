@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Asterdots/Talent-Hackathon-at-Home#readme",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "node-sass": "^4.13.1"
   },
   "dependencies": {
