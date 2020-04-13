@@ -1,0 +1,28 @@
+.offer {
+    background: $light-gray;
+    width: 95%;
+    margin: 10px 0;
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding: 15px;
+    @include flex(column, center, center);
+    cursor: pointer;
+    h3 {
+        color: $ocean-blue-dark;
+    }
+    img{
+        width: 20px;
+        margin: 0;
+        padding: 0;
+    }
+    span {
+        color: $ocean-blue-medium;
+        font-weight: bold;
+    }
+    button {
+        margin-top: 20px;
+    }
+    @media screen and (min-width: 700px) {
+        width: 600px;
+    }
+}
