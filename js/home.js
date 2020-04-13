@@ -1,18 +1,5 @@
 // Modules
-import Glide from '@glidejs/glide';
 import axios from 'axios';
-
-// Carousel functionality
-let glide = new Glide('.glide', { 
-    type: 'carousel',
-    startAt: 0,
-    perView: 4,
-    autoplay: 3000
-});
-glide.mount();
-
-let banner = new Glide('.glide__carousel', { autoplay: 7500 });
-banner.mount();
 
 // API functionality
 const ID = "WavvLdfdP6g8aZTtbBQHTw";
@@ -21,20 +8,20 @@ const URL_PROVIDER = `https://api.yelp.com/v3/businesses/${ID}`;
 
 const banner_img = document.getElementsByClassName("img__1");
 
-const refill = () => {
-    try {
-        // let res = await axios.get(URL_PROVIDER);
-        // console.log(res.data);
-        let res = fetch(URL_PROVIDER, { mode: 'cors', headers: {'Access-Control-Allow-Origin':'*'}})
-            .then((input) => console.log(input))
-            .catch((input) => console.log(`ERROR BY - ${input}`))
-    } catch {
-        console.log("An error ocurred");
-    }
-    // let data = JSON.parse(res.data);
+// const refill = () => {
+//     try {
+//         // let res = await axios.get(URL_PROVIDER);
+//         // console.log(res.data);
+//         let res = fetch(URL_PROVIDER, { mode: 'cors', headers: {'Access-Control-Allow-Origin':'*'}})
+//             .then((input) => console.log(input))
+//             .catch((input) => console.log(`ERROR BY - ${input}`))
+//     } catch {
+//         console.log("An error ocurred");
+//     }
+//     // let data = JSON.parse(res.data);
 
-    // banner_img.src = data["img_url"];
-    // console.log(data["img_url"]);
-}
+//     // banner_img.src = data["img_url"];
+//     // console.log(data["img_url"]);
+// }
 
-window.onload(refill());
+// window.onload(refill());
