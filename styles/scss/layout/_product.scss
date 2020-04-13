@@ -1,0 +1,137 @@
+@mixin flex ($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.product__main {
+    padding: 30px 0;
+    width: 100%;
+    @include flex(column, center, center);
+    .productImg--container {
+        width: 95%;
+        max-height: 150px;
+        @include flex(column, center, center);
+        @media screen and (min-width: 700px) {
+            width: 600px;
+        }
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .productDescription--container{
+        margin: 20px 0;
+        width: 95%;
+        h2 {
+            text-decoration: underline;
+            color: $ocean-blue-dark;
+        }
+        .product--description {
+            margin-top: 20px;
+            background: #eaeaea;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 7px;
+            text-align: justify;
+            h3 {
+                text-decoration: underline;
+                margin-bottom: 20px;
+                color: $ocean-blue-medium;
+            }
+            p {
+                color: $gray;
+            }
+        }
+        @media screen and (min-width: 700px) {
+            width: 600px;
+        }
+    }
+    .addProduct--container {
+        background: #eaeaea;
+        box-sizing: border-box;
+        padding: 10px;
+        border-radius: 7px;
+        width: 95%;
+        @include flex(column, center, center);
+        .especialInstruction {
+            width: 100%;
+            h3 {
+                text-decoration: underline;
+                margin-bottom: 5px;
+                color: $ocean-blue-medium;
+            }
+            input {
+                width: 100%;
+                height: 30px;
+                outline: none;
+                border: none;
+                background: #eaeaea;
+                border-bottom: 2px solid $gray;
+                margin-bottom: 40px;
+                color: $gray;
+                box-sizing: border-box;
+                padding: 0 10px;
+                ::placeholder {
+                    color: $gray;
+                }
+            }
+        }
+        .addProduct {
+            width: 60%;
+            @include flex(row, center, center);
+            box-sizing: border-box;
+            padding: 15px;
+            margin-bottom: 40px;
+            span {
+                font-size: 30px;
+                color: $ocean-blue-dark;
+                font-weight: bold;
+            }
+            button {
+                width: 80px;
+                height: 80px;
+                border: none;
+                outline: none;
+                border-radius: 40px;
+                font-size: 30px;
+                margin: 0;
+            }
+            #less {
+                background: $light-gray;
+                color: $gray;
+               
+            }
+            #less:hover {
+                background: white;
+            }
+            #less:active {
+                background: $gray;
+                color: #eaeaea;
+            }
+            #plus {
+                background: $ocean-blue;
+                color: $ocean-blue-medium;
+            }
+            #plus:hover {
+                background: $ocean-blue-light;
+            }
+            #plus:active {
+                background: $ocean-blue-medium;
+                color: $ocean-blue-light
+            }
+        }
+        @media screen and (min-width: 700px) {
+            width: 600px;
+        }
+    }
+    button {
+        margin-top: 30px;
+        width: 95%;
+        @media screen and (min-width: 700px) {
+            width: auto;
+            padding: 16px 36px;
+        }
+    }
+}

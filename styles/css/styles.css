@@ -475,6 +475,125 @@ figcaption {
 .hidden {
   display: none; }
 
+.product__main {
+  padding: 30px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .product__main .productImg--container {
+    width: 95%;
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    @media screen and (min-width: 700px) {
+      .product__main .productImg--container {
+        width: 600px; } }
+    .product__main .productImg--container img {
+      width: 100%;
+      object-fit: cover; }
+  .product__main .productDescription--container {
+    margin: 20px 0;
+    width: 95%; }
+    .product__main .productDescription--container h2 {
+      text-decoration: underline;
+      color: #003f40; }
+    .product__main .productDescription--container .product--description {
+      margin-top: 20px;
+      background: #eaeaea;
+      box-sizing: border-box;
+      padding: 10px;
+      border-radius: 7px;
+      text-align: justify; }
+      .product__main .productDescription--container .product--description h3 {
+        text-decoration: underline;
+        margin-bottom: 20px;
+        color: #007d80; }
+      .product__main .productDescription--container .product--description p {
+        color: #555555; }
+    @media screen and (min-width: 700px) {
+      .product__main .productDescription--container {
+        width: 600px; } }
+  .product__main .addProduct--container {
+    background: #eaeaea;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 7px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .product__main .addProduct--container .especialInstruction {
+      width: 100%; }
+      .product__main .addProduct--container .especialInstruction h3 {
+        text-decoration: underline;
+        margin-bottom: 5px;
+        color: #007d80; }
+      .product__main .addProduct--container .especialInstruction input {
+        width: 100%;
+        height: 30px;
+        outline: none;
+        border: none;
+        background: #eaeaea;
+        border-bottom: 2px solid #555555;
+        margin-bottom: 40px;
+        color: #555555;
+        box-sizing: border-box;
+        padding: 0 10px; }
+        .product__main .addProduct--container .especialInstruction input ::placeholder {
+          color: #555555; }
+    .product__main .addProduct--container .addProduct {
+      width: 60%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 15px;
+      margin-bottom: 40px; }
+      .product__main .addProduct--container .addProduct span {
+        font-size: 30px;
+        color: #003f40;
+        font-weight: bold; }
+      .product__main .addProduct--container .addProduct button {
+        width: 80px;
+        height: 80px;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        font-size: 30px;
+        margin: 0; }
+      .product__main .addProduct--container .addProduct #less {
+        background: #c2c2c2;
+        color: #555555; }
+      .product__main .addProduct--container .addProduct #less:hover {
+        background: white; }
+      .product__main .addProduct--container .addProduct #less:active {
+        background: #555555;
+        color: #eaeaea; }
+      .product__main .addProduct--container .addProduct #plus {
+        background: #01c4c8;
+        color: #007d80; }
+      .product__main .addProduct--container .addProduct #plus:hover {
+        background: #00e2e6; }
+      .product__main .addProduct--container .addProduct #plus:active {
+        background: #007d80;
+        color: #00e2e6; }
+    @media screen and (min-width: 700px) {
+      .product__main .addProduct--container {
+        width: 600px; } }
+  .product__main button {
+    margin-top: 30px;
+    width: 95%; }
+    @media screen and (min-width: 700px) {
+      .product__main button {
+        width: auto;
+        padding: 16px 36px; } }
+
 * {
   margin: 0 auto;
   overflow-x: hidden;
