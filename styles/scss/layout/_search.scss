@@ -43,3 +43,35 @@
         background-color: $light-gray;
     }
 }
+
+.product {
+    cursor: pointer;
+
+    & > span {
+        margin-top: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & > span > img {
+        height: 110px;
+    }
+}
+
+.data {
+    font-size: 1.15rem;
+    font-weight: 600;
+
+    & > p:nth-child(1) {
+        color: #000;
+    }
+
+    & > p:nth-child(2) {
+        color: $light-gray;
+    }
+
+    & > p:nth-child(3) {
+        color: $money-green;
+    }
+} 

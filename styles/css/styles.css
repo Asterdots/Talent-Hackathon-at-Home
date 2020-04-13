@@ -420,6 +420,26 @@ figcaption {
     width: 70%;
     background-color: #c2c2c2; }
 
+.product {
+  cursor: pointer; }
+  .product > span {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .product > span > img {
+    height: 110px; }
+
+.data {
+  font-size: 1.15rem;
+  font-weight: 600; }
+  .data > p:nth-child(1) {
+    color: #000; }
+  .data > p:nth-child(2) {
+    color: #c2c2c2; }
+  .data > p:nth-child(3) {
+    color: #1bca00; }
+
 .inventory__main {
   width: 100%;
   padding: 30px 0;
