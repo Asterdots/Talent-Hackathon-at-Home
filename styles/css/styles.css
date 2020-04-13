@@ -199,6 +199,28 @@
     font-family: 'Russo One', sans-serif;
     font-size: 25px; }
 
+.pedido {
+  background: #01c4c8;
+  color: #003f40;
+  font-weight: bold;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+
+.pedido:hover {
+  background: #007d80; }
+
+.pedido:active {
+  background: #003f40;
+  color: #01c4c8; }
+
 .login__main {
   width: 100%;
   height: auto;
@@ -748,6 +770,86 @@ figcaption {
         flex-direction: row;
         justify-content: center;
         align-items: center; } }
+
+.pedido {
+  background: #01c4c8;
+  color: #003f40;
+  font-weight: bold;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+
+.pedido:hover {
+  background: #007d80; }
+
+.pedido:active {
+  background: #003f40;
+  color: #01c4c8; }
+
+.seller__main {
+  width: 100%; }
+  .seller__main h2 {
+    width: 95%;
+    margin-top: 30px;
+    color: #003f40;
+    text-decoration: underline; }
+    @media screen and (min-width: 700px) {
+      .seller__main h2 {
+        width: 500px;
+        text-align: center; } }
+  .seller__main .pedido__container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #eaeaea;
+    border-radius: 7px;
+    width: 95%;
+    box-sizing: border-box;
+    padding: 10px 10px 0 10px; }
+    .seller__main .pedido__container h3 {
+      color: #007d80;
+      text-decoration: underline; }
+    @media screen and (min-width: 700px) {
+      .seller__main .pedido__container {
+        width: 600px; } }
+  .seller__main .pedidoInfo__container {
+    width: 95%;
+    background: #eaeaea;
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 30px; }
+    .seller__main .pedidoInfo__container h3 {
+      color: #007d80;
+      text-decoration: underline;
+      margin-bottom: 15px; }
+    .seller__main .pedidoInfo__container p {
+      color: #555555;
+      margin: 5px 0; }
+    .seller__main .pedidoInfo__container .seller__buttons {
+      margin-top: 15px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .seller__main .pedidoInfo__container .seller__buttons :last-child {
+        margin-top: 10px; }
+      @media screen and (min-width: 1000px) {
+        .seller__main .pedidoInfo__container .seller__buttons {
+          flex-direction: row; } }
+    @media screen and (min-width: 700px) {
+      .seller__main .pedidoInfo__container {
+        width: 600px; } }
+
+.hidden {
+  display: none; }
 
 * {
   margin: 0 auto;
