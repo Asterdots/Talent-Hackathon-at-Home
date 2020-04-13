@@ -3,4 +3,5 @@ models/
 views/
 package.json
 .cache/
-*.DS_Store
+.DS_Store
+.idea/
