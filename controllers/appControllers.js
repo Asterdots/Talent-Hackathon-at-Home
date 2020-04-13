@@ -12,3 +12,7 @@ exports.showStore = (req, res) => {
 exports.showStoreOrdersList = (req, res) => {
   res.render('store-orders-list');
 };
+
+exports.showDealersOrdersList = (req, res) => {
+  res.render('dealers-orders-list');
+};

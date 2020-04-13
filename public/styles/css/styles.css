@@ -221,6 +221,33 @@
   background: #003f40;
   color: #01c4c8; }
 
+.offer {
+  background: #c2c2c2;
+  width: 95%;
+  margin: 10px 0;
+  border-radius: 7px;
+  box-sizing: border-box;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+  .offer h3 {
+    color: #003f40; }
+  .offer img {
+    width: 20px;
+    margin: 0;
+    padding: 0; }
+  .offer span {
+    color: #007d80;
+    font-weight: bold; }
+  .offer button {
+    margin-top: 20px; }
+  @media screen and (min-width: 700px) {
+    .offer {
+      width: 600px; } }
+
 .login__main {
   width: 100%;
   height: auto;
@@ -817,7 +844,8 @@ figcaption {
       text-decoration: underline; }
     @media screen and (min-width: 700px) {
       .seller__main .pedido__container {
-        width: 600px; } }
+        width: 600px;
+        margin-top: 50px; } }
   .seller__main .pedidoInfo__container {
     width: 95%;
     background: #eaeaea;
@@ -846,10 +874,43 @@ figcaption {
           flex-direction: row; } }
     @media screen and (min-width: 700px) {
       .seller__main .pedidoInfo__container {
-        width: 600px; } }
+        width: 600px;
+        margin-top: 50px; } }
 
 .hidden {
   display: none; }
+
+.delivery__main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .delivery__main h2 {
+    width: 100%;
+    text-align: center;
+    background: #01c4c8;
+    color: #003f40;
+    box-sizing: border-box;
+    text-decoration: underline;
+    padding: 20px 0; }
+  .delivery__main .offer--list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 95%;
+    background: #eaeaea;
+    box-sizing: border-box;
+    border-radius: 7px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    @media screen and (min-width: 700px) {
+      .delivery__main .offer--list {
+        width: 700px;
+        margin-top: 40px;
+        margin-bottom: 40px; } }
 
 * {
   margin: 0 auto;

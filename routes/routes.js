@@ -47,5 +47,9 @@ module.exports = () => {
     appControllers.showStoreOrdersList
   );
 
+  router.get('/dealers-orders-list',
+    appControllers.showDealersOrdersList
+  );
+
   return router;
 };
