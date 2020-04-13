@@ -3,6 +3,7 @@ const router = express.Router();
 const appControllers = require('../controllers/appControllers');
 const userControllers = require('../controllers/userControllers');
 const authControllers = require('../controllers/authControllers');
+const productControllers = require('../controllers/productControllers');
 
 module.exports = () => {
   // Users controllers
@@ -27,10 +28,14 @@ module.exports = () => {
     userControllers.uploadProfileImage,
     userControllers.editProfile
   );
-
   // show profile
   router.get('/show-profile/:userID',
     userControllers.showProfile
+  );
+
+  // products
+  router.get('/products-panel',
+    productControllers.productsPanel
   );
 
   return router;

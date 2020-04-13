@@ -12,6 +12,7 @@ const routes = require('./routes/routes');
 // DB config
 const db = require('./config/db');
 require('./models/Users');
+require('./models/Products');
 db.sync()
   .then(() => console.log('DB conected'))
   .catch((err) => console.log(err));

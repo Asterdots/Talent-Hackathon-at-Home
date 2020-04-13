@@ -16,15 +16,21 @@ nav {
     -webkit-box-shadow: rgba(0,0,0,0.15) 0px -3px 8px;
     -moz-box-shadow: rgba(0,0,0,0.15) 0px -3px 8px;
 
-    & > span  {
+    & > a  {
         font-size: 0.75rem;
         font-weight: 800;
         color: $light-gray;
         text-align: center;
+        text-decoration: none;
         cursor: pointer;
 
-        &:nth-child(1) {
+        &:active {
             color: $ocean-blue;
+           
+        }
+
+        &:hover {
+            color: $light-gray;
         }
     }
 }

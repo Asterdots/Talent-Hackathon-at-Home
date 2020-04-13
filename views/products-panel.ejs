@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encartgo | Inventario</title>
+    <link rel="stylesheet" href="styles/css/styles.css">
+    <link rel="icon" href="../assets/favicon.png" type="image/png">
+</head>
+<body>
+    <section class="inventory__main">
+        <h2>Inventario</h2>
+        <div class="inventory__main--list">
+            <div class="product" onclick="mostrarForm()">
+                <h3>Producto 1</h3>
+                <p>Descripción</p>
+                <span class="price">$45.00</span>
+            </div>
+            <div class="product" onclick="mostrarForm()">
+                <h3>Producto 2</h3>
+                <p>Descripción</p>
+                <span class="price">$45.00</span>
+            </div>
+            <div class="product" onclick="mostrarForm()">
+                <h3>Producto 3</h3>
+                <p>Descripción</p>
+                <span class="price">$45.00</span>
+            </div>
+        </div>
+        <button class="button" onclick="mostrarForm()">Añadir producto</button>
+        <div class="hidden" id="inventory-form">
+            <h3>Agregar Producto</h3>
+            <form action="">
+                <input class="input" type="text" placeholder="Producto 1">
+                <input class="input" type="text" placeholder="Descripción">
+                <input class="input" type="text" placeholder="Precio">
+                <button class="button" onclick="ocultarForm()">Guardar cambios</button>
+                <button class="button" onclick="ocultarForm()">Eliminar productos</button>
+            </form>
+        </div>
+        <script src="../js/inventory.js"></script>
+    </section>
+</body>
+</html>
