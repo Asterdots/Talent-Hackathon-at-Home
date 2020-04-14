@@ -1,0 +1,80 @@
+.inherit-2 {
+    & > a:nth-child(2) {
+        color: $ocean-blue;
+    }
+}
+
+.order {
+    & > h1 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-top: 25%;
+    }
+
+    &__img {
+        height: 240px;
+        margin-top: 4%;
+        border-radius: 9%;
+    }
+
+    & > div > span {
+        font-size: 1.25rem;
+        font-weight: 600; 
+
+        @media (min-width: 315px) and (max-width: 374px){
+            font-size: 1.1rem;
+        }
+        
+        & > p:nth-child(1){
+            color: #000;
+
+            & > span {
+                color: $money-green;
+                float: right;
+            }
+        }
+
+        & > p:nth-child(2){
+            color: $light-gray;
+        }
+        & > p:nth-child(3){
+            color: $money-green;
+
+            & > span {
+                float: right;
+                color: $light-gray;
+            }
+        }
+    }
+
+    & > div > hr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $light-gray;
+    }
+}
+
+.button__container {
+    & > button {
+        font-size: 1.25rem;
+        font-weight: 600;
+        background-color: $ocean-blue;
+        border-radius: 50px 50px;
+        font-family: inherit;
+        height: 4.5rem;
+        margin-top: 12%;
+        border: none;
+        cursor: pointer;
+        outline: none;
+
+        &:active {
+            border:none;
+            outline: none;
+        }
+    }
+}

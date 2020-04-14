@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="../styles/css/styles.css" type="text/css">
+    <!-- CDN links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>encartgo | ¡Ordena Ya!</title>
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Bottom Navbar -->
+    <nav class="inherit-2">
+        <a href="../index.html">
+            <i class="fas fa-store fa-lg"></i>
+            <p>Tienda</p>
+        </a>
+        <a href="../screens/order.html">
+            <i class="fas fa-shopping-bag fa-lg"></i>
+            <p>Orden</p>
+        </a>
+        <a href="../screens/search.html">
+            <i class="fas fa-search fa-lg"></i>
+            <p>Buscar</p>
+        </a>
+        <a href="../screens/account.html">
+            <i class="fas fa-user fa-lg"></i>
+            <p>Perfil</p>
+        </a>
+    </nav>
+
+     <!-- Location Status Header -->
+     <header>
+        <div>
+            <span>Enviar a <i class="fas fa-caret-down"></i></span><br />
+            <!-- Insert location response through API comunication -->
+            <span class="location">
+                <i class="fas fa-map-marker-alt"></i> 
+                Alameda Centro,Guanajuato
+            </span>
+        </div>
+    </header>
+
+    <!-- Order Info container -->
+    <div class="order">
+        <h1>
+            Actual / Anteriores
+        </h1>
+        <div class="columns">
+            <img 
+                class="order__img column is-10-mobile is-offset-1-mobile"
+                src="../assets/food.jpg" 
+                alt="product" 
+            />
+            <span class="column is-10-mobile is-offset-1-mobile">
+                <p>Nombre de la orden</p>
+                <p>Provedor</p>
+                <p>$100.00 MXN<span>Unidades: 2</span></p>
+            </span>
+            <div class="divider">
+                <hr />
+            </div>
+            <span class="column is-10-mobile is-offset-1-mobile">
+                <p>Total a pagar: <span>$200.00 MXN</span></p>
+            </span>
+        </div>
+    </div>
+    <div class="button__container columns">
+        <button class="column is-10-mobile is-offset-1-mobile">
+            Rastrear Pedido
+        </button>
+    </div>
+
+    <script src="../js/order.js"></script>
+</body>
+</html>
