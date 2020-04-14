@@ -1,7 +1,9 @@
+const {v4: uuid} = require('uuid');
 const multer = require('multer');
 const fs = require('fs');
 const multerConfig = require('../config/multer');
 const Users = require('../models/Users');
+const Orders = require('../models/Orders');
 
 // upload image implementation
 const upload = multer(multerConfig).single('image'); // name in the form
@@ -39,7 +41,7 @@ exports.createAccount = async (req, res) => {
   try {
     // Check if there are errors from express-validator
     if (expressErrorsList) throw 'OnlyExpressErrors'
-    await Users.create(user); // this one validates using Sequelize
+    await Users.create(user, {id: uuid()}); // this one validates using Sequelize
 
     // if everything is cool we send a message
     req.flash('success', 'Tu cuenta ha sido creada correctamente!');
@@ -109,9 +111,10 @@ exports.showProfile = async (req, res) => {
 
 exports.showEditStore = async (req, res) => {
   const store = await Users.findOne({where: {id: req.params.storeID}});
-  console.log(req.body);
+  const client = await Users.findOne({where: {id: req.user.id}});
   res.render('edit-store', {
-    store
+    store,
+    client
   });
 };
 
@@ -119,9 +122,9 @@ exports.editStore = async (req, res) => {
   const store = await Users.findOne({where: {id: req.user.id}});
   const {name, lastName, bussiness, description, address} = req.body;
 
-  if (store.image && req.file) fs.unlink(`${__dirname}/../public/uploads/profiles/${store.image}`);
+  if (store.image && req.file) fs.unlink(`${__dirname}/../public/uploads/profiles/${store.image}`, err => console.log(err));
 
-  if (req.file) store.image = req.file.name;
+  if (req.file) store.image = req.file.filename;
 
   store.name = name;
   store.lastName = lastName;
@@ -135,7 +138,33 @@ exports.editStore = async (req, res) => {
 exports.orderToStore = async (req, res) => {
   const client = await Users.findOne({where: {id: req.user.id}});
   const store = await Users.findOne({where: {id: req.params.storeID}});
-  console.log(req.user.id);
-  console.log(req.params.storeID);
+
+  console.log(req.body);
+  // Create the order
+  await Orders.create({
+    description: req.body.description, 
+    UserId: req.params.storeID,
+    client: req.user.id
+  });
+  
   console.log(`${client.name} compra a ${store.name}`);
+  res.redirect('/');
+};
+
+exports.showOrders = async (req, res) => {
+  const orders = await Orders.findAll({where: {UserId: req.params.storeID}});
+  let clients = [];
+  const user = await Users.findOne({where: {id: req.user.id}});
+
+  let client;
+  for (let i = 0; i < orders.length; i++) {
+    client = await Users.findOne({where: {id: orders[i].client}});
+    clients.push(client);
+  } 
+
+  res.render('show-orders', { 
+    orders,
+    clients, 
+    user
+  });
 };

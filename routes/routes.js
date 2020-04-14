@@ -30,11 +30,13 @@ module.exports = () => {
   );
   // show profile
   router.get('/show-profile/:userID',
+    authControllers.isAuthenticated,
     userControllers.showProfile
   );
 
   // products
   router.get('/products-panel',
+  authControllers.isAuthenticated,
     productControllers.productsPanel
   );
 
@@ -44,24 +46,39 @@ module.exports = () => {
   ); 
   // send order
   router.post('/show-store/:storeID',
+  authControllers.isAuthenticated,
+
     userControllers.orderToStore,
   );
 
   router.get('/store-orders-list',
+  authControllers.isAuthenticated,
+
     appControllers.showStoreOrdersList
   );
 
   router.get('/dealers-orders-list',
+  authControllers.isAuthenticated,
+
     appControllers.showDealersOrdersList
   );
 
   // edit store
   router.get('/edit-store/:storeID',
+  authControllers.isAuthenticated,
+
     userControllers.showEditStore
   );
   router.post('/edit-store/:storeID',
+  authControllers.isAuthenticated,
+
     userControllers.uploadProfileImage,
     userControllers.editStore
+  );
+
+  // orders
+  router.get('/orders/:storeID',
+    userControllers.showOrders
   );
 
   return router;
