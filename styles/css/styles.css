@@ -248,6 +248,170 @@
     .offer {
       width: 600px; } }
 
+.nav__main {
+  width: 100%; }
+  .nav__main .nav {
+    border-top: 1.5px solid #01c4c8;
+    width: 100%;
+    height: auto; }
+  @media screen and (min-width: 1000px) {
+    .nav__main {
+      display: none; } }
+
+.icon {
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .icon span {
+    color: #007d80;
+    font-size: 12px; }
+  .icon img {
+    width: 50px; }
+
+.home__main .horizontal__homeNav {
+  background: #007d80;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%; }
+  .home__main .horizontal__homeNav ul {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: center; }
+  .home__main .horizontal__homeNav li {
+    display: inline; }
+    .home__main .horizontal__homeNav li a {
+      color: white;
+      text-decoration: none; }
+    .home__main .horizontal__homeNav li a:hover {
+      text-decoration: underline; }
+  @media screen and (max-width: 1000px) {
+    .home__main .horizontal__homeNav {
+      display: none; } }
+
+.home__direction__container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  background: #01c4c8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1.5px solid #007d80; }
+  .home__direction__container span {
+    font-weight: bold;
+    color: #003f40; }
+  .home__direction__container p {
+    color: #555555; }
+
+.main__container {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 20px; }
+  .main__container .categories_carrousel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background: #eaeaea;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 5px 0; }
+  .main__container .interest__container {
+    margin-top: 10px;
+    width: 100%;
+    background: #eaeaea;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 10px 0; }
+  .main__container .close__container {
+    margin-top: 10px;
+    width: 100%;
+    background: #eaeaea;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 10px 0; }
+    @media screen and (min-width: 1000px) {
+      .main__container .close__container {
+        margin-bottom: 40px; } }
+  .main__container h3 {
+    margin-top: 20px;
+    width: 95%;
+    color: #007d80;
+    text-decoration: underline; }
+
+.carrosel--item {
+  min-width: 150px;
+  height: 100px;
+  background: #007d80;
+  border-radius: 5px;
+  margin: 5px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #003f40;
+  font-weight: bold; }
+  @media screen and (min-width: 1200px) {
+    .carrosel--item {
+      min-width: 300px;
+      height: 250px; } }
+
+.carrosel--bigItem {
+  background: #01c4c8;
+  min-width: 250px;
+  height: 150px;
+  border-radius: 5px;
+  margin: 5px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .carrosel--bigItem .bigItem--title {
+    width: 100%;
+    text-decoration: none;
+    color: #003f40;
+    text-align: center; }
+  .carrosel--bigItem p {
+    color: #555555;
+    font-weight: bold; }
+  .carrosel--bigItem .bigItem--details {
+    color: #555555; }
+  @media screen and (min-width: 1200px) {
+    .carrosel--bigItem {
+      min-width: 400px;
+      height: 250px; } }
+
+::-webkit-scrollbar {
+  background: #eaeaea; }
+
+::-webkit-scrollbar-button {
+  display: none; }
+
+::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+  border-radius: 15px; }
+
+::-webkit-scrollbar-track {
+  display: none; }
+
 .login__main {
   width: 100%;
   height: auto;
