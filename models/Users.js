@@ -44,6 +44,7 @@ const Users = db.define('Users', {
     }
   },
   bussiness: Sequelize.STRING,
+  description: Sequelize.TEXT,
   image: Sequelize.TEXT,
   tokenPass: Sequelize.STRING,
   tokenDate: Sequelize.DATE

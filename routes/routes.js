@@ -39,8 +39,12 @@ module.exports = () => {
   );
 
   // demo routes
-  router.get('/show-store', 
+  router.get('/show-store/:storeID', 
     appControllers.showStore
+  ); 
+  // send order
+  router.post('/show-store/:storeID',
+    userControllers.orderToStore,
   );
 
   router.get('/store-orders-list',
@@ -49,6 +53,15 @@ module.exports = () => {
 
   router.get('/dealers-orders-list',
     appControllers.showDealersOrdersList
+  );
+
+  // edit store
+  router.get('/edit-store/:storeID',
+    userControllers.showEditStore
+  );
+  router.post('/edit-store/:storeID',
+    userControllers.uploadProfileImage,
+    userControllers.editStore
   );
 
   return router;

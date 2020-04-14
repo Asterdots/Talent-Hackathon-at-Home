@@ -106,3 +106,36 @@ exports.showProfile = async (req, res) => {
     userDB
   });
 };
+
+exports.showEditStore = async (req, res) => {
+  const store = await Users.findOne({where: {id: req.params.storeID}});
+  console.log(req.body);
+  res.render('edit-store', {
+    store
+  });
+};
+
+exports.editStore = async (req, res) => {
+  const store = await Users.findOne({where: {id: req.user.id}});
+  const {name, lastName, bussiness, description, address} = req.body;
+
+  if (store.image && req.file) fs.unlink(`${__dirname}/../public/uploads/profiles/${store.image}`);
+
+  if (req.file) store.image = req.file.name;
+
+  store.name = name;
+  store.lastName = lastName;
+  store.bussiness = bussiness;
+  store.description = description;
+  store.address = address;
+  await store.save();
+  res.redirect('/');
+};
+
+exports.orderToStore = async (req, res) => {
+  const client = await Users.findOne({where: {id: req.user.id}});
+  const store = await Users.findOne({where: {id: req.params.storeID}});
+  console.log(req.user.id);
+  console.log(req.params.storeID);
+  console.log(`${client.name} compra a ${store.name}`);
+};

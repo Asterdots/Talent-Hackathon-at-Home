@@ -6,8 +6,27 @@
   <title>Vista Principal</title>
 </head>
 <body>
-  <a href="/edit-profile/<%= userID %>">Click para editar tu perfil</a>
-  <a href="/show-profile/<%= userID %>">Ver mi perfil</a> 
-  <a href="/products-panel">Panel de tus Productos</a>
+  <!-- We check if it is a store -->
+  <p><%= user.name %> </p>
+  <% if (user.bussiness) { %>
+    <p>Tienes tienda</p>
+    <a href="/edit-store/<%= user.id %>">Click para editar tu tienda</a>
+  <% } else { %>
+    <p>No tienes tienda</p>
+    <a href="/edit-profile/<%= user.id %>">Click para editar tu perfil</a>
+  <% } %> 
+
+  <% if (user.bussiness) { %>
+    <a href="/show-store/<%= user.id %>">Click para ver tu tienda</a>
+    <a href="/products-panel">Panel de tus Productos</a>
+  <% } else { %>
+    <a href="/show-profile/<%= user.id %>">Click para ver tu perfil</a>
+  <% } %> 
+  
+  <% if (stores) { %>
+   <% stores.forEach(store => { %>
+    <a href="/show-store/<%= store.id %>"> <%= store.bussiness %> </a>
+   <% }) %>
+  <% } %>
 </body>
 </html>

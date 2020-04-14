@@ -23,8 +23,10 @@
             <p><%= userDB.email %> </p>
             <span>Dirección</span>
             <p><%= userDB.address %> </p>
-            <span>Negocio</span>
-            <p><%= userDB.bussiness %> </p>
+            <% if (userDB.bussiness) { %>
+                <span>Negocio</span>
+                <p><%= userDB.bussiness %> </p>
+            <% } %>
         </div>
         <div class="user--adress"></div>
     </section> 
