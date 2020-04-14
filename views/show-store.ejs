@@ -8,12 +8,15 @@
     <link rel="icon" href="/assets/favicon.png" type="image/png">
 </head>
 <body>
+    <h3>Menú de mavegación superior</h3>
     <section class="commerce__main">
-        <div class="commerceImg--container">
-            <img src="/uploads/profiles/<%= store.image %>" width="400px" alt="item image">
-        </div>
+        <% if (store.image) { %>
+            <div class="commerceImg--container">
+                <img src="/uploads/profiles/<%= store.image %>" alt="item image">
+            </div>
+        <% } %>
         <% if (store.id === client.id) { %>
-            <a href="/edit-store/<%= store.id %> ">Editar Perfil</a>
+            <a href="/edit-store/<%= store.id %> ">Editar Perfil. Agregar estilos como en clientes</a>
         <% } %>  
         <div class="commerceDescription--container">
             <h2><%= store.bussiness %> </h2>
@@ -23,18 +26,19 @@
             </div>
             <div class="commerce--description">
                 <h3>Dirección</h3>
-                <p>Calle No., Colonia, Estado</p>
-                <div class="user--adress"></div>
+                <p><%= store.address %> </p>
+                <!-- <div class="user--adress"></div> -->
             </div>
 
-            <div class="especialInstruction">
-                <form method="POST">
-                    <h3>Realiza tu pedido</h3>
-                    <input type="text" name="description" placeholder="Describe qué es lo que quieres pedir">
-                    <button class="button" type="submit">Realizar pedido</button>
-                </form>
-            </div>
+                <div class="especialInstruction">
+                    <form method="POST">
+                        <h3>Realiza tu pedido</h3>
+                        <input type="text" name="description" placeholder="Describe qué es lo que quieres pedir">
+                        <button class="button" type="submit">Realizar pedido</button>
+                    </form>
+                </div>
         </div>
     </section>
+    <h3>Menú de navegación inferior</h3>
 </body>
 </html>

@@ -112,7 +112,6 @@ exports.showProfile = async (req, res) => {
 exports.showEditStore = async (req, res) => {
   const store = await Users.findOne({where: {id: req.params.storeID}});
   const client = await Users.findOne({where: {id: req.user.id}});
-  console.log(client);
   res.render('edit-store', {
     store,
     client
@@ -149,6 +148,7 @@ exports.orderToStore = async (req, res) => {
   });
   
   console.log(`${client.name} compra a ${store.name}`);
+  res.redirect('/');
 };
 
 exports.showOrders = async (req, res) => {

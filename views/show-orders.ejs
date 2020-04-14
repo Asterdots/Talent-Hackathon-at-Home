@@ -21,8 +21,7 @@
                 <h3>Nuevo Pedido</h3>
                 <span><img src="../assets/ProfileG.png" alt="">Cliente: <%= clients[i].name %></span>
                 <P><%= orders[i].description %> </P>
-                <p><span>Recoger en: </span>Restaurante</p>
-                <p><span>Entrega en: </span>Dirección</p>
+                <p><span>Entrega en: </span><%= clients[i].address %> </p>
                 <button class="button">Aceptar</button>
             </div>
           <% } %>

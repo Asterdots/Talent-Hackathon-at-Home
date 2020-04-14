@@ -43,6 +43,7 @@ const Users = db.define('Users', {
     }
   },
   bussiness: Sequelize.STRING,
+  address: Sequelize.TEXT,
   description: Sequelize.TEXT,
   image: Sequelize.TEXT,
   tokenPass: Sequelize.STRING,
