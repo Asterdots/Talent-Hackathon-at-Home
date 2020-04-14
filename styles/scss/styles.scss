@@ -2,6 +2,9 @@
 @import "components/inputsAndButtons";
 @import "components/account";
 @import "components/logoAsterdots";
+@import "components/ordered";
+@import "components/offer.scss";
+@import "components/1";
 
 //Layout
 @import "layout/login";
@@ -11,6 +14,9 @@
 @import "layout/inventory";
 @import "layout/product";
 @import "layout/order";
+@import "layout/commerce";
+@import "layout/seller";
+@import "layout/delivery";
 
 // Colors
 @import "variables/colors";

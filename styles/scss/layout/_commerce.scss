@@ -1,0 +1,107 @@
+@mixin flex ($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.commerce__main {
+    padding: 30px 0;
+    width: 100%;
+    @include flex(column, center, center);
+    .commerceImg--container {
+        width: 95%;
+        max-height: 150px;
+        @include flex(column, center, center);
+        @media screen and (min-width: 700px) {
+            width: 600px;
+        }
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .commerceDescription--container{
+        margin: 20px 0;
+        width: 95%;
+        h2 {
+            text-decoration: underline;
+            color: $ocean-blue-dark;
+        }
+        .commerce--description {
+            margin-top: 20px;
+            background: #eaeaea;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 7px;
+            text-align: justify;
+            h3 {
+                text-decoration: underline;
+                margin-bottom: 20px;
+                color: $ocean-blue-medium;
+            }
+            p {
+                color: $gray;
+            }
+            .user--adress {
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+        }
+        @media screen and (min-width: 700px) {
+            width: 600px;
+        }
+    }
+    .especialInstruction{
+        margin-top: 20px;
+        border-radius: 7px;
+        background: #eaeaea;
+        box-sizing: border-box;
+        padding: 15px;
+        width: 100%;
+        h3 {
+            text-decoration: underline;
+            margin-bottom: 20px;
+            color: $ocean-blue-medium;
+        }
+        input {
+            width: 100%;
+            outline: none;
+            height: 30px;
+            color: $gray;
+            box-sizing: border-box;
+            padding: 0 5px;
+            background: #eaeaea;
+            border: none;
+            border-bottom: 1.5px solid $gray;
+        }
+        input::placeholder {
+            height: 30px;
+            color: $gray;
+        }
+    }
+    #mensajebtn {
+        background: $ocean-blue-medium;
+    }
+
+    button {
+        margin-top: 30px;
+        width: 95%;
+        @media screen and (min-width: 700px) {
+            width: auto;
+            padding: 16px 36px;
+        }
+    }
+    .commerce_main--botones{
+        width: 95%;
+        @include flex(column, center, center)
+        @media screen and (min-width: 700px) {
+            width: 600px;
+            @include flex(row, center, center)
+        }
+    }
+    // @media screen and (min-width: 700px) {
+    //     background: $ocean-blue-light;
+    //     background:  linear-gradient(135deg, $ocean-blue-light, white);
+    // }
+}
