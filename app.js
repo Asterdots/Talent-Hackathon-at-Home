@@ -10,7 +10,8 @@ const passport = require('./config/passport');
 const routes = require('./routes/routes');
 
 // DB config
-const db = require('./config/db');
+// const db = require('./config/alfonsoDB');
+const db = require('./config/db'); // Comenta esta línea bro y descomenta la de arriba
 require('./models/Users');
 require('./models/Products');
 db.sync()

@@ -10,14 +10,10 @@
     <section class="home__main">
         <div class="horizontal__homeNav">
             <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/search">Buscar</a></li>
-                <li><a href="">Ordenes</a></li>
-                <% if (user.bussiness) { %>
-                  <li><a href="/show-store/<%= user.id %>">Mi Cuenta</a></li>
-                <% } else { %>
-                  <li><a href="/show-profile/<%= user.id %>">Mi Cuenta</a></li>
-                <% } %> 
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Account</a></li>
             </ul>
         </div>
         <div class="home__direction__container">
@@ -25,20 +21,24 @@
             <p>Calle, colonia, número</p>
         </div>
         <section class="main__container">
+
             
-            <h3>Cerca de ti</h3>
-            <% if (stores.length) { %>
-             <% stores.forEach(store => { %>
-              <div class="carrosel--bigItem">
-                <h3 class="bigItem--title"><%= store.name %> </h3>
-                <p>Negocio</p>
-                <div class="bigItem--details">
-                    <span>Price</span>
+            <div class="categories_carrousel">
+                <div class="carrosel--item">
+                    <span>Categoría</span>
+                </div>
+                <div class="carrosel--item">
+                    <span>Categoría</span>
+                </div>
+                <div class="carrosel--item">
+                    <span>Categoría</span>
+                </div>
+                <div class="carrosel--item">
                     <span>Categoría</span>
                 </div>
             </div>
-             <% }) %>
-            <% } %>
+            
+            <h3>Te puede interesar</h3>
             <div class="interest__container">
                 <div class="carrosel--bigItem">
                     <h3 class="bigItem--title">Producto</h3>
@@ -106,25 +106,20 @@
     <section class="nav__main">
         <nav class="nav">
             <div class="icon">
-                <a href="/"><img src="../assets/HomeG.png" alt=""></a>
-                <span>Inicio</span>
+                <a href="#"><img src="../assets/HomeG.png" alt=""></a>
+                <span>Home</span>
             </div>
             <div class="icon">
-                <a href="/search"><img src="../assets/SearchG.png" alt=""></a>
-                <span>Buscar</span>
+                <a href="#"><img src="../assets/SearchG.png" alt=""></a>
+                <span>Search</span>
             </div>
             <div class="icon">
                 <a href="#"><img src="../assets/OrderG.png" alt=""></a>
                 <span>Order</span>
             </div>
             <div class="icon">
-              <% if (user.bussiness) { %>
-                <li><a href="/show-store/<%= user.id %>" ><img src="/assets/ProfileG.png" alt=""></a></li>
-                <span>Mi Cuenta</span>
-              <% } else { %>
-                <li><a href="/show-profile/<%= user.id %> "><img src="/assets/ProfileG.png" alt=""></a></li>
+                <a href="#"><img src="../assets/ProfileG.png" alt=""></a>
                 <span>Profile</span>
-              <% } %> 
             </div>
         </nav>
     </section>
