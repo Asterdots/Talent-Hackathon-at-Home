@@ -2,6 +2,7 @@ const multer = require('multer');
 const fs = require('fs');
 const multerConfig = require('../config/multer');
 const Users = require('../models/Users');
+const Orders = require('../models/Orders');
 
 // upload image implementation
 const upload = multer(multerConfig).single('image'); // name in the form
@@ -109,7 +110,6 @@ exports.showProfile = async (req, res) => {
 
 exports.showEditStore = async (req, res) => {
   const store = await Users.findOne({where: {id: req.params.storeID}});
-  console.log(req.body);
   res.render('edit-store', {
     store
   });
@@ -119,9 +119,9 @@ exports.editStore = async (req, res) => {
   const store = await Users.findOne({where: {id: req.user.id}});
   const {name, lastName, bussiness, description, address} = req.body;
 
-  if (store.image && req.file) fs.unlink(`${__dirname}/../public/uploads/profiles/${store.image}`);
+  if (store.image && req.file) fs.unlink(`${__dirname}/../public/uploads/profiles/${store.image}`, err => console.log(err));
 
-  if (req.file) store.image = req.file.name;
+  if (req.file) store.image = req.file.filename;
 
   store.name = name;
   store.lastName = lastName;
@@ -135,7 +135,32 @@ exports.editStore = async (req, res) => {
 exports.orderToStore = async (req, res) => {
   const client = await Users.findOne({where: {id: req.user.id}});
   const store = await Users.findOne({where: {id: req.params.storeID}});
-  console.log(req.user.id);
-  console.log(req.params.storeID);
+
+  console.log(req.body);
+  // Create the order
+  await Orders.create({
+    description: req.body.description, 
+    UserId: req.params.storeID,
+    client: req.user.id
+  });
+  
   console.log(`${client.name} compra a ${store.name}`);
+};
+
+exports.showOrders = async (req, res) => {
+  const orders = await Orders.findAll({where: {UserId: req.params.storeID}});
+  let clients = [];
+  const user = await Users.findOne({where: {id: req.user.id}});
+
+  let client;
+  for (let i = 0; i < orders.length; i++) {
+    client = await Users.findOne({where: {id: orders[i].client}});
+    clients.push(client);
+  } 
+
+  res.render('show-orders', { 
+    orders,
+    clients, 
+    user
+  });
 };

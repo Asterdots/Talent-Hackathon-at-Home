@@ -64,5 +64,10 @@ module.exports = () => {
     userControllers.editStore
   );
 
+  // orders
+  router.get('/orders/:storeID',
+    userControllers.showOrders
+  );
+
   return router;
 };

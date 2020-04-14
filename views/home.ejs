@@ -12,7 +12,7 @@
             <ul>
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/search">Buscar</a></li>
-                <li><a href="">Ordenes</a></li>
+                <li><a href="/orders/<%= user.id %> ">Ordenes</a></li>
                 <% if (user.bussiness) { %>
                   <li><a href="/show-store/<%= user.id %>">Mi Cuenta</a></li>
                 <% } else { %>
@@ -30,12 +30,12 @@
             <% if (stores.length) { %>
              <% stores.forEach(store => { %>
               <div class="carrosel--bigItem">
-                <h3 class="bigItem--title"><%= store.name %> </h3>
-                <p>Negocio</p>
+                <h3 class="bigItem--title"><%= store.bussiness %> </h3>
+                <p><%= store.description %> </p>
                 <div class="bigItem--details">
-                    <span>Price</span>
-                    <span>Categoría</span>
+                    <span><<%= store.address %> /span>
                 </div>
+                <a href="/show-store/<%= store.id %>">Ver más</a>
             </div>
              <% }) %>
             <% } %>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encartgo | Delivery</title>
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <link rel="icon" href="../assets/favicon.png" type="image/png">
+</head>
+<body>
+    <section class="delivery__main">
+      <% if (user.bussiness) { %>
+        <h2>Pedidos por enviar</h2>
+      <% } else { %>
+        <h2>Funcíon por implementar</h2>
+      <% } %>  
+
+        <div class="offer--list">
+          <% for( let i = 0; i < orders.length; i++ ) { %>
+            <div class="offer">
+                <h3>Nuevo Pedido</h3>
+                <span><img src="../assets/ProfileG.png" alt="">Cliente: <%= clients[i].name %></span>
+                <P><%= orders[i].description %> </P>
+                <p><span>Recoger en: </span>Restaurante</p>
+                <p><span>Entrega en: </span>Dirección</p>
+                <button class="button">Aceptar</button>
+            </div>
+          <% } %>
+        </div>
+
+    </section>
+</body>
+</html>

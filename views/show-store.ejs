@@ -10,7 +10,7 @@
 <body>
     <section class="commerce__main">
         <div class="commerceImg--container">
-            <img src="/assets/food.jpg" alt="item image">
+            <img src="/uploads/profiles/<%= store.image %>" width="400px" alt="item image">
         </div>
         <% if (store.id) { %>
             <a href="/edit-store/<%= store.id %> ">Editar Perfil</a>
@@ -26,18 +26,15 @@
                 <p>Calle No., Colonia, Estado</p>
                 <div class="user--adress"></div>
             </div>
+
             <div class="especialInstruction">
-                <h3>Instrucción especial</h3>
-                <input type="text" placeholder="Agrega alguna instrucción">
+                <form method="POST">
+                    <h3>Realiza tu pedido</h3>
+                    <input type="text" name="description" placeholder="Describe qué es lo que quieres pedir">
+                    <button class="button" type="submit">Realizar pedido</button>
+                </form>
             </div>
         </div>
-        <div class="commerce_main--botones">
-            <button id="mensajebtn" class="button">Mandar mensaje</button>
-            <button class="button">Quiero comprar</button>
-        </div>
-        <form method="POST">
-          <button type="submit">Enviar info</button>
-        </form>
     </section>
 </body>
 </html>
