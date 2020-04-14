@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize');
 const {v4: uuid} = require('uuid');
+const Sequelize = require('sequelize');
 const bcrypt = require('bcrypt-nodejs');
 const db = require('../config/db');
 
@@ -7,8 +7,7 @@ const Users = db.define('Users', {
   id: {
     type: Sequelize.UUID,
     primaryKey: true,
-    allowNull: false,
-    defaultValue: uuid()
+    allowNull: true,
   },
   name: {
     type: Sequelize.STRING(60),
@@ -51,6 +50,7 @@ const Users = db.define('Users', {
 }, {
   hooks: {
     beforeCreate(user) {
+      user.id = uuid(),
       user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10, null));
     }
   }

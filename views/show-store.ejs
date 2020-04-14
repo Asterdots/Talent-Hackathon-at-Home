@@ -12,7 +12,7 @@
         <div class="commerceImg--container">
             <img src="/uploads/profiles/<%= store.image %>" width="400px" alt="item image">
         </div>
-        <% if (store.id) { %>
+        <% if (store.id === client.id) { %>
             <a href="/edit-store/<%= store.id %> ">Editar Perfil</a>
         <% } %>  
         <div class="commerceDescription--container">

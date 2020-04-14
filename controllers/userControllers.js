@@ -1,3 +1,4 @@
+const {v4: uuid} = require('uuid');
 const multer = require('multer');
 const fs = require('fs');
 const multerConfig = require('../config/multer');
@@ -40,7 +41,7 @@ exports.createAccount = async (req, res) => {
   try {
     // Check if there are errors from express-validator
     if (expressErrorsList) throw 'OnlyExpressErrors'
-    await Users.create(user); // this one validates using Sequelize
+    await Users.create(user, {id: uuid()}); // this one validates using Sequelize
 
     // if everything is cool we send a message
     req.flash('success', 'Tu cuenta ha sido creada correctamente!');
@@ -110,8 +111,11 @@ exports.showProfile = async (req, res) => {
 
 exports.showEditStore = async (req, res) => {
   const store = await Users.findOne({where: {id: req.params.storeID}});
+  const client = await Users.findOne({where: {id: req.user.id}});
+  console.log(client);
   res.render('edit-store', {
-    store
+    store,
+    client
   });
 };
 

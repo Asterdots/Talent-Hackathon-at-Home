@@ -14,8 +14,11 @@ exports.home = async (req, res) => {
 
 exports.showStore = async (req, res) => {
   const store = await Users.findOne({where: {id: req.params.storeID}});
+  const client = await Users.findOne({where: {id: req.user.id}});
+  console.log(client);
   res.render('show-store', {
-    store
+    store,
+    client
   });
 };
 

@@ -13,7 +13,7 @@ const routes = require('./routes/routes');
 // const db = require('./config/alfonsoDB');
 const db = require('./config/db'); // Comenta esta línea bro y descomenta la de arriba
 require('./models/Users');
-require('./models/Products');
+// require('./models/Products');
 require('./models/Orders');
 db.sync()
   .then(() => console.log('DB conected'))
