@@ -2,6 +2,7 @@ const Sequelize = require('sequelize');
 const {v4: uuid} = require('uuid');
 const bcrypt = require('bcrypt-nodejs');
 const db = require('../config/db');
+//Modificar a config/alfonsoDB
 
 const Users = db.define('Users', {
   id: {

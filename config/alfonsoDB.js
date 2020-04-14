@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-module.exports = new Sequelize('encartgo', 'name', 'password', {
+module.exports = new Sequelize('encartgo', 'postgres', 'GaZavG98', {
   host: '127.0.0.1',
   port: '5432',
   dialect: 'postgres',

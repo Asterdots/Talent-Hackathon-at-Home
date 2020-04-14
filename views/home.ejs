@@ -119,10 +119,10 @@
             </div>
             <div class="icon">
               <% if (user.bussiness) { %>
-                <li><a href="/show-store/<%= user.id %>" ><img src="/assets/ProfileG.png" alt=""></a></li>
+                <a href="/show-store/<%= user.id %>" ><img src="/assets/ProfileG.png" alt=""></a>
                 <span>Mi Cuenta</span>
               <% } else { %>
-                <li><a href="/show-profile/<%= user.id %> "><img src="/assets/ProfileG.png" alt=""></a></li>
+                <a href="/show-profile/<%= user.id %> "><img src="/assets/ProfileG.png" alt=""></a>
                 <span>Profile</span>
               <% } %> 
             </div>
