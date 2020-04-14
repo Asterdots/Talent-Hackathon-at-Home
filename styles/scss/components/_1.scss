@@ -1,9 +1,19 @@
 .nav__main {
     width: 100%;
+    border-top: 1.5px solid $ocean-blue;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    background: white;
+    z-index: 3;
+    margin-top: 40px;
+    box-sizing: border-box;
     .nav {
-        border-top: 1.5px solid $ocean-blue;
-        width: 100%;
-        height: auto;
+        box-sizing: border-box;
+        @include flex (row, start, center);
+        @media screen and (min-width: 700px) {
+            width: 500px;
+        }
     }
     @media screen and (min-width: 1000px) {
         display: none;
@@ -16,9 +26,11 @@
     span {
         color: $ocean-blue-medium;
         font-size: 12px;
+        margin: 0;
     }
     img {
         width: 50px;
+        margin: 0;
     }
 }
 
@@ -96,6 +108,9 @@
         padding: 10px 0;
         @media screen and (min-width: 1000px) {
             margin-bottom: 40px;
+        }
+        @media screen and (min-height: 400px) {
+            margin-bottom: 100px;
         }
     }
     h3 {

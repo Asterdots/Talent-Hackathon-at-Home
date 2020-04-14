@@ -249,11 +249,24 @@
       width: 600px; } }
 
 .nav__main {
-  width: 100%; }
+  width: 100%;
+  border-top: 1.5px solid #01c4c8;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  background: white;
+  z-index: 3;
+  margin-top: 40px;
+  box-sizing: border-box; }
   .nav__main .nav {
-    border-top: 1.5px solid #01c4c8;
-    width: 100%;
-    height: auto; }
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center; }
+    @media screen and (min-width: 700px) {
+      .nav__main .nav {
+        width: 500px; } }
   @media screen and (min-width: 1000px) {
     .nav__main {
       display: none; } }
@@ -267,9 +280,11 @@
   justify-content: center; }
   .icon span {
     color: #007d80;
-    font-size: 12px; }
+    font-size: 12px;
+    margin: 0; }
   .icon img {
-    width: 50px; }
+    width: 50px;
+    margin: 0; }
 
 .home__main .horizontal__homeNav {
   background: #007d80;
@@ -351,6 +366,9 @@
     @media screen and (min-width: 1000px) {
       .main__container .close__container {
         margin-bottom: 40px; } }
+    @media screen and (min-height: 400px) {
+      .main__container .close__container {
+        margin-bottom: 100px; } }
   .main__container h3 {
     margin-top: 20px;
     width: 95%;
@@ -469,7 +487,7 @@
     font-size: 30px;
     color: #01c4c8; }
 
-nav {
+.navBar {
   bottom: 0;
   height: 8%;
   width: 100%;
@@ -484,16 +502,16 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.15) 0px -3px 8px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px -3px 8px;
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px -3px 8px; }
-  nav > a {
+  .navBar > a {
     font-size: 0.75rem;
     font-weight: 800;
     color: #c2c2c2;
     text-align: center;
     text-decoration: none;
     cursor: pointer; }
-    nav > a:active {
+    .navBar > a:active {
       color: #01c4c8; }
-    nav > a:hover {
+    .navBar > a:hover {
       color: #c2c2c2; }
 
 .inherit > a:nth-child(1) {
