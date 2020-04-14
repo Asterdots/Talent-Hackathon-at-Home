@@ -417,19 +417,6 @@
       min-width: 400px;
       height: 250px; } }
 
-::-webkit-scrollbar {
-  background: #eaeaea; }
-
-::-webkit-scrollbar-button {
-  display: none; }
-
-::-webkit-scrollbar-thumb {
-  background: #c2c2c2;
-  border-radius: 15px; }
-
-::-webkit-scrollbar-track {
-  display: none; }
-
 .login__main {
   width: 100%;
   height: auto;
