@@ -8,6 +8,7 @@
 </head>
 <body>
     <section class="home__main">
+        
         <div class="horizontal__homeNav">
             <ul>
                 <li><a href="/">Inicio</a></li>
@@ -20,20 +21,24 @@
                 <% } %> 
             </ul>
         </div>
+
         <section class="main__container">
             
             <h3>Cerca de ti</h3>
-            <% if (stores.length) { %>
-             <% stores.forEach(store => { %>
-              <div class="carrosel--bigItem">
-                <h3 class="bigItem--title"><%= store.bussiness %> </h3>
-                <div class="bigItem--details">
-                    <span><%= store.description %></span>
-                </div>
-                <a href="/show-store/<%= store.id %>">Ver más</a>
+            <div class="close__container">
+                <% if (stores.length) { %>
+                    <% stores.forEach(store => { %>
+                     <div class="carrosel--bigItem">
+                       <h3 class="bigItem--title"><%= store.bussiness %> </h3>
+                       <div class="bigItem--details">
+                           <span><%= store.description %></span>
+                       </div>
+                       <a href="/show-store/<%= store.id %>">Ver más</a>
+                   </div>
+                    <% }) %>
+                   <% } %>
             </div>
-             <% }) %>
-            <% } %>
+            <h3>Te puede interesar</h3>
             <div class="interest__container">
                 <div class="carrosel--bigItem">
                     <h3 class="bigItem--title">Producto</h3>
@@ -70,7 +75,7 @@
     <section class="nav__main">
         <nav class="nav">
             <div class="icon">
-                <a href="/"><img src="../assets/HomeG.png" alt=""></a>
+                <a href="/"><img src="../assets/Home.png" alt=""></a>
                 <span>Inicio</span>
             </div>
             <div class="icon">

@@ -9,13 +9,26 @@
 </head>
 <body>
     <section class="delivery__main">
-      <% if (user.bussiness) { %>
-        <h2>Pedidos por enviar</h2>
-      <% } else { %>
-        <h2>Funcíon por implementar</h2>
-      <% } %>  
+
+      <div class="horizontal__homeNav">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/search">Buscar</a></li>
+            <li><a href="/orders/<%= user.id %> ">Ordenes</a></li>
+            <% if (user.bussiness) { %>
+              <li><a href="/show-store/<%= user.id %>">Mi Cuenta</a></li>
+            <% } else { %>
+              <li><a href="/show-profile/<%= user.id %>">Mi Cuenta</a></li>
+            <% } %> 
+        </ul>
+    </div>
 
         <div class="offer--list">
+          <% if (user.bussiness) { %>
+            <h2>Pedidos por enviar</h2>
+          <% } else { %>
+            <h2>Funcíon por implementar</h2>
+          <% } %>  
           <% for( let i = 0; i < orders.length; i++ ) { %>
             <div class="offer">
                 <h3>Nuevo Pedido</h3>
@@ -26,6 +39,33 @@
             </div>
           <% } %>
         </div>
+
+
+        <section class="nav__main">
+          <nav class="nav">
+              <div class="icon">
+                  <a href="/"><img src="../assets/HomeG.png" alt=""></a>
+                  <span>Inicio</span>
+              </div>
+              <div class="icon">
+                  <a href="/search"><img src="../assets/SearchG.png" alt=""></a>
+                  <span>Buscar</span>
+              </div>
+              <div class="icon">
+                  <a href="/orders/<%= user.id %> "><img src="../assets/Order.png" alt=""></a>
+                  <span>Ordenes</span>
+              </div>
+              <div class="icon">
+                <% if (user.bussiness) { %>
+                  <a href="/show-store/<%= user.id %>" ><img src="/assets/ProfileG.png" alt=""></a>
+                  <span>Mi Cuenta</span>
+                <% } else { %>
+                  <a href="/show-profile/<%= user.id %> "><img src="/assets/ProfileG.png" alt=""></a>
+                  <span>Profile</span>
+                <% } %> 
+              </div>
+          </nav>
+      </section>
 
     </section>
 </body>

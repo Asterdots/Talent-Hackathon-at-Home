@@ -8,13 +8,30 @@
 </head>
 <body>
     <section class="user__main">
+
+        <div class="horizontal__homeNav">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/search">Buscar</a></li>
+                <li><a href="/orders/<%= userDB.id %> ">Ordenes</a></li>
+                <% if (userDB.bussiness) { %>
+                  <li><a href="/show-store/<%= userDB.id %>">Mi Cuenta</a></li>
+                <% } else { %>
+                  <li><a href="/show-profile/<%= userDB.id %>">Mi Cuenta</a></li>
+                <% } %> 
+            </ul>
+        </div>
+
         <div class="user__main--info">
-            <h3>Barra de navegación superior para vista escritorio. Copiar de home.ejs</h3>
           <% if (userDB.image) { %>
             <div class="user--image">
                 <img src="/uploads/profiles/<%= userDB.image %>" width="400px" alt="profile image">
             </div>
-          <% } %>
+          <% } else { %>
+            <div class="user--image">
+                <img src="/assets/Profile.png" alt="Profile image">
+            </div>
+            <% } %>
             <p><%= userDB.name %> </p>
             <a href="/edit-profile/<%= userDB.id %> ">Editar Perfil</a>
         </div>
@@ -30,7 +47,33 @@
             <% } %>
         </div>
         <!-- <div class="user--adress"></div> -->
-        <h3>Barra de navegación para vista mobile. Copiar de home.ejs</h3>
+
+        <section class="nav__main">
+            <nav class="nav">
+                <div class="icon">
+                    <a href="/"><img src="../assets/HomeG.png" alt=""></a>
+                    <span>Inicio</span>
+                </div>
+                <div class="icon">
+                    <a href="/search"><img src="../assets/SearchG.png" alt=""></a>
+                    <span>Buscar</span>
+                </div>
+                <div class="icon">
+                    <a href="/orders/<%= userDB.id %> "><img src="../assets/OrderG.png" alt=""></a>
+                    <span>Ordenes</span>
+                </div>
+                <div class="icon">
+                  <% if (userDB.bussiness) { %>
+                    <a href="/show-store/<%= userDB.id %>" ><img src="/assets/Profile.png" alt=""></a>
+                    <span>Mi Cuenta</span>
+                  <% } else { %>
+                    <a href="/show-profile/<%= userDB.id %> "><img src="/assets/Profile.png" alt=""></a>
+                    <span>Profile</span>
+                  <% } %> 
+                </div>
+            </nav>
+        </section>
+
     </section> 
 </body>
 </html>

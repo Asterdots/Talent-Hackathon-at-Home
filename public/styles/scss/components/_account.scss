@@ -32,6 +32,9 @@
     box-sizing: border-box;
     width: 90%;
     @include flex(column, center, center);
+    @media screen and (min-width: 1000px) {
+        margin-top: 50px;
+    }
     .user--image {
         background: #eaeaea;
         box-sizing: border-box;
@@ -101,6 +104,10 @@
 .user__edit {
     @include flex(column, center, center);
     text-align: justify;
+    margin-top: 60px;
+    @media screen and (min-width:1000px) {
+        margin-top: 80px;
+    }
     form {
         text-align: center;
         h3 {
@@ -128,6 +135,10 @@
         
     }
 }
+#profileBussinesAdv{
+    color: $light-gray;
+}
+
 .user--adress {
     width: 100%;
     height: 250px;

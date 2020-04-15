@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const {v4: uuid} = require('uuid');
-const db = require('../config/db');
+const db = require('../config/alfonsoDB');
 const Users = require('./Users');
 
 const Orders = db.define('Orders', {

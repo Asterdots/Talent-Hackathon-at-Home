@@ -73,6 +73,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  @media screen and (min-width: 1000px) {
+    .user__main--info {
+      margin-top: 50px; } }
   .user__main--info .user--image {
     background: #eaeaea;
     box-sizing: border-box;
@@ -135,7 +138,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: justify; }
+  text-align: justify;
+  margin-top: 60px; }
+  @media screen and (min-width: 1000px) {
+    .user__edit {
+      margin-top: 80px; } }
   .user__edit form {
     text-align: center;
     width: 90%; }
@@ -156,6 +163,9 @@
           .user__edit form .user__form--mainInfo label {
             padding-left: 5px;
             box-sizing: border-box; } }
+
+#profileBussinesAdv {
+  color: #c2c2c2; }
 
 .user--adress {
   width: 100%;
@@ -286,29 +296,31 @@
     width: 50px;
     margin: 0; }
 
-.home__main .horizontal__homeNav {
+.horizontal__homeNav {
   background: #007d80;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 50px;
+  top: 0;
   width: 100%; }
-  .home__main .horizontal__homeNav ul {
+  .horizontal__homeNav ul {
     width: 700px;
     display: flex;
     flex-direction: row;
     align-items: space-around;
     justify-content: center; }
-  .home__main .horizontal__homeNav li {
+  .horizontal__homeNav li {
     display: inline; }
-    .home__main .horizontal__homeNav li a {
+    .horizontal__homeNav li a {
       color: white;
       text-decoration: none; }
-    .home__main .horizontal__homeNav li a:hover {
+    .horizontal__homeNav li a:hover {
       text-decoration: underline; }
   @media screen and (max-width: 1000px) {
-    .home__main .horizontal__homeNav {
+    .horizontal__homeNav {
       display: none; } }
 
 .home__direction__container {
@@ -331,6 +343,9 @@
   width: 100%;
   box-sizing: border-box;
   padding-top: 20px; }
+  @media screen and (min-width: 1000px) {
+    .main__container {
+      margin-top: 50px; } }
   .main__container .categories_carrousel {
     width: 100%;
     display: flex;
@@ -1080,6 +1095,9 @@ figcaption {
         width: 700px;
         margin-top: 40px;
         margin-bottom: 40px; } }
+    @media screen and (min-width: 1000px) {
+      .delivery__main .offer--list {
+        margin-top: 80px; } }
 
 * {
   margin: 0 auto;
