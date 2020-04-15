@@ -13,7 +13,9 @@
             <ul>
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/search">Buscar</a></li>
-                <li><a href="/orders/<%= user.id %> ">Ordenes</a></li>
+                <% if (user.bussiness){ %>
+                    <li><a href="/orders/<%= user.id %> ">Ordenes</a></li>
+                  <% } %>
                 <% if (user.bussiness) { %>
                   <li><a href="/show-store/<%= user.id %>">Mi Cuenta</a></li>
                 <% } else { %>
@@ -23,15 +25,31 @@
         </div>
 
         <section class="main__container">
+
+            <div class="categories__carrousel">
+                <div class="carrousel--item">
+                    <h2>Tiendas</h2>
+                </div>
+                <div class="carrousel--item">
+                    <h2>Farmacias</h2>
+                </div>
+                <div class="carrousel--item">
+                    <h2>Ferreterías</h2>
+                </div>
+                <div class="carrousel--item">
+                    <h2>Mascotas</h2>
+                </div>
+            </div>
             
             <h3>Cerca de ti</h3>
             <div class="close__container">
                 <% if (stores.length) { %>
                     <% stores.forEach(store => { %>
                      <div class="carrosel--bigItem">
+                         <img src="/assets/food.jpg" alt="">
                        <h3 class="bigItem--title"><%= store.bussiness %> </h3>
                        <div class="bigItem--details">
-                           <span><%= store.description %></span>
+                           <p><%= store.description %></p>
                        </div>
                        <a href="/show-store/<%= store.id %>">Ver más</a>
                    </div>
@@ -82,10 +100,12 @@
                 <a href="/search"><img src="../assets/SearchG.png" alt=""></a>
                 <span>Buscar</span>
             </div>
-            <div class="icon">
-                <a href="/orders/<%= user.id %> "><img src="../assets/OrderG.png" alt=""></a>
-                <span>Ordenes</span>
-            </div>
+            <% if (user.bussiness) {%>
+                <div class="icon">
+                  <a href="/orders/<%= user.id %> "><img src="../assets/OrderG.png" alt=""></a>
+                  <span>Ordenes</span>
+              </div>
+              <% } %>
             <div class="icon">
               <% if (user.bussiness) { %>
                 <a href="/show-store/<%= user.id %>" ><img src="/assets/ProfileG.png" alt=""></a>

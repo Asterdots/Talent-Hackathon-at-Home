@@ -8,18 +8,39 @@
     <link rel="icon" href="/assets/favicon.png" type="image/png">
 </head>
 <body>
-    <h3>Menú de mavegación superior</h3>
+    
+    <div class="horizontal__homeNav">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/search">Buscar</a></li>
+            <% if (client.bussiness){ %>
+                <li><a href="/orders/<%= client.id %> ">Ordenes</a></li>
+              <% } %>
+            <% if (client.bussiness) { %>
+              <li><a href="/show-store/<%= client.id %>">Mi Cuenta</a></li>
+            <% } else { %>
+              <li><a href="/show-profile/<%= client.id %>">Mi Cuenta</a></li>
+            <% } %> 
+        </ul>
+    </div>
+
     <section class="commerce__main">
         <% if (store.image) { %>
             <div class="commerceImg--container">
-                <img src="/uploads/profiles/<%= store.image %>" alt="item image">
+                <img src="/uploads/profiles/<%= store.image %>" alt="store image">
+            </div>
+        <% } else { %>
+            <div class="commerceImg--container">
+                <img src="/assets/food.jpg" alt="store image">
             </div>
         <% } %>
-        <% if (store.id === client.id) { %>
-            <a href="/edit-store/<%= store.id %> ">Editar Perfil. Agregar estilos como en clientes</a>
-        <% } %>  
         <div class="commerceDescription--container">
-            <h2><%= store.bussiness %> </h2>
+            <div class="commerce--name__container">
+                <h2><%= store.bussiness %> </h2>
+                <% if (store.id === client.id) { %>
+                    <a href="/edit-store/<%= store.id %> ">Editar Perfil.</a>
+                <% } %>  
+            </div>
             <div class="commerce--description">
                 <h3>Descripción</h3>
                 <p><%= store.description %> </p>
@@ -39,6 +60,34 @@
                 </div>
         </div>
     </section>
-    <h3>Menú de navegación inferior</h3>
+    
+    <section class="nav__main">
+        <nav class="nav">
+            <div class="icon">
+                <a href="/"><img src="../assets/HomeG.png" alt=""></a>
+                <span>Inicio</span>
+            </div>
+            <div class="icon">
+                <a href="/search"><img src="../assets/SearchG.png" alt=""></a>
+                <span>Buscar</span>
+            </div>
+            <% if (client.bussiness) {%>
+                <div class="icon">
+                  <a href="/orders/<%= client.id %> "><img src="../assets/OrderG.png" alt=""></a>
+                  <span>Ordenes</span>
+              </div>
+              <% } %>
+            <div class="icon">
+              <% if (client.bussiness) { %>
+                <a href="/show-store/<%= client.id %>" ><img src="/assets/Profile.png" alt=""></a>
+                <span>Mi Cuenta</span>
+              <% } else { %>
+                <a href="/show-profile/<%= client.id %> "><img src="/assets/ProfileG.png" alt=""></a>
+                <span>Profile</span>
+              <% } %> 
+            </div>
+        </nav>
+    </section>
+
 </body>
 </html>

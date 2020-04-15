@@ -168,3 +168,10 @@ exports.showOrders = async (req, res) => {
     user
   });
 };
+
+exports.showSearch = async (req, res) => {
+  const userDB = await Users.findOne({where: {id: req.user.id}});
+  res.render('search', {
+    user: userDB
+  })
+}

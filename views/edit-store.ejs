@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="/styles/css/styles.css">
 </head>
 <body>
+
+    <div class="horizontal__homeNav">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/search">Buscar</a></li>
+            <% if (client.bussiness){ %>
+                <li><a href="/orders/<%= client.id %> ">Ordenes</a></li>
+              <% } %>
+            <% if (client.bussiness) { %>
+              <li><a href="/show-store/<%= client.id %>">Mi Cuenta</a></li>
+            <% } else { %>
+              <li><a href="/show-profile/<%= client.id %>">Mi Cuenta</a></li>
+            <% } %> 
+        </ul>
+    </div>
+
     <section class="user__edit">
          <form method="POST" enctype="multipart/form-data">
             <div class="user__form--nameInfo">
@@ -37,6 +53,34 @@
             </div>
             <button class="button" type="submit">Aceptar</button>
         </form>
+    </section>
+
+    <section class="nav__main">
+        <nav class="nav">
+            <div class="icon">
+                <a href="/"><img src="../assets/HomeG.png" alt=""></a>
+                <span>Inicio</span>
+            </div>
+            <div class="icon">
+                <a href="/search"><img src="../assets/SearchG.png" alt=""></a>
+                <span>Buscar</span>
+            </div>
+            <% if (client.bussiness) {%>
+                <div class="icon">
+                  <a href="/orders/<%= client.id %> "><img src="../assets/OrderG.png" alt=""></a>
+                  <span>Ordenes</span>
+              </div>
+              <% } %>
+            <div class="icon">
+              <% if (client.bussiness) { %>
+                <a href="/show-store/<%= client.id %>" ><img src="/assets/Profile.png" alt=""></a>
+                <span>Mi Cuenta</span>
+              <% } else { %>
+                <a href="/show-profile/<%= client.id %> "><img src="/assets/Profile.png" alt=""></a>
+                <span>Profile</span>
+              <% } %> 
+            </div>
+        </nav>
     </section>
 </body>
 </html>

@@ -1,77 +1,58 @@
-// Styling
-.inherit-3 {
-    & > a:nth-child(3) {
-        color: $ocean-blue;
-    }
-}
-
-.container {
-    & > h1 {
-        font-size: 1.7rem;
-        font-weight: 800;
-        color: #000;
-        margin-top: 30%;
-    }
-
-    & > input {
-        background-color: $light-gray;
-        border: none;
-        border-radius: 8px;
-        height: 3.5rem;
-        margin-top: 3%;
-        font-size: 1.25rem;
-
-        &::placeholder {
-            font-size: 1.25rem;
-            font-family: 'JetBrains Mono';
-        }
-
-        &:focus {
-            outline: none;
-        }
-    }
-}
-
-.divider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3%;
-
-    & > hr {
-        width: 70%;
-        background-color: $light-gray;
-    }
-}
-
-.product {
-    cursor: pointer;
-
-    & > span {
-        margin-top: 3%;
+.search__main {
+    width: 100%;
+    .search__main--container {
+        height: 90vh;
+        margin: 0 auto;
+        margin-top: 50px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-    }
-
-    & > span > img {
-        height: 110px;
+        width: 90%;
+        img {
+            width: 100%;
+            @media screen and (min-width: 700px) {
+                width: 400px;
+            }
+        }
+        h2 {
+            color: $ocean-blue-dark;
+            @media screen and (min-width: 700px) {
+                width: 90%;
+                margin: 15px 0;
+            }
+        }
+        .search--input {
+            width: 100%;
+            input {
+                margin-top: 20px;
+                width: 100%;
+                height: 40px;
+                font-size: 20px;
+                color: $ocean-blue;
+                border: none;
+                box-sizing: border-box;
+                padding: 0 10px;
+                outline: none;
+                border: 1.5px solid $ocean-blue;
+                border-radius: 15px;
+                @media screen and (min-width: 700px) {
+                    height: 60px;
+                    border-radius: 30px;
+                    border: 3px solid $ocean-blue;
+                    padding: 0 20px;
+                }
+            }
+            ::placeholder {
+                color: $ocean-blue;
+                font-size: 20px;
+            } 
+        }
+        @media screen and (min-width: 700px) {
+            width: 800px;
+            display: flex   ;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }
-
-.data {
-    font-size: 1.15rem;
-    font-weight: 600;
-
-    & > p:nth-child(1) {
-        color: #000;
-    }
-
-    & > p:nth-child(2) {
-        color: $light-gray;
-    }
-
-    & > p:nth-child(3) {
-        color: $money-green;
-    }
-} 

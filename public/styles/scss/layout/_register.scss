@@ -36,4 +36,15 @@
         font-size: 30px;
         color: $ocean-blue;
     }
+    a {
+        color: $ocean-blue-dark;
+        margin-top: 10px;
+        text-decoration: none;
+    }
+    :hover {
+        color: $ocean-blue;
+    }
+    :active {
+        color: $light-gray;
+    }
 }

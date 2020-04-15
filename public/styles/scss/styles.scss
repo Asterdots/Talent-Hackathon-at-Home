@@ -1,13 +1,11 @@
 //Components
 @import "components/inputsAndButtons";
-@import "components/account";
 @import "components/logoAsterdots";
 @import "components/ordered";
-@import "components/offer.scss";
-@import "components/1";
 
 //Layout
 @import "layout/login";
+@import "layout/account";
 @import "layout/register";
 @import "layout/home";
 @import "layout/search";

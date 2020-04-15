@@ -81,5 +81,8 @@ module.exports = () => {
     userControllers.showOrders
   );
 
+  // search
+  router.get('/search', userControllers.showSearch);
+
   return router;
 };

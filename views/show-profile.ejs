@@ -13,7 +13,9 @@
             <ul>
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/search">Buscar</a></li>
-                <li><a href="/orders/<%= userDB.id %> ">Ordenes</a></li>
+                <% if (userDB.bussiness){ %>
+                    <li><a href="/orders/<%= user.id %> ">Ordenes</a></li>
+                  <% } %>
                 <% if (userDB.bussiness) { %>
                   <li><a href="/show-store/<%= userDB.id %>">Mi Cuenta</a></li>
                 <% } else { %>
@@ -58,10 +60,12 @@
                     <a href="/search"><img src="../assets/SearchG.png" alt=""></a>
                     <span>Buscar</span>
                 </div>
-                <div class="icon">
-                    <a href="/orders/<%= userDB.id %> "><img src="../assets/OrderG.png" alt=""></a>
-                    <span>Ordenes</span>
-                </div>
+                <% if (userDB.bussiness) {%>
+                    <div class="icon">
+                      <a href="/orders/<%= user.id %> "><img src="../assets/Order.png" alt=""></a>
+                      <span>Ordenes</span>
+                  </div>
+                  <% } %>
                 <div class="icon">
                   <% if (userDB.bussiness) { %>
                     <a href="/show-store/<%= userDB.id %>" ><img src="/assets/Profile.png" alt=""></a>

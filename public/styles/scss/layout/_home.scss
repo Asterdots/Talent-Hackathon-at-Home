@@ -1,180 +1,219 @@
-//Bottom navbar styles -- Mobile approch
-.navBar {
-    bottom: 0; 
-    height: 8%;
+.nav__main {
     width: 100%;
-    display: flex;
-    justify-content: center;
-
-    overflow: hidden;
+    border-top: 1.5px solid $ocean-blue;
+    height: auto;
     position: fixed;
-    z-index: 1;
-    justify-content: center;
+    bottom: 0;
+    background: white;
+    z-index: 3;
+    margin-top: 40px;
+    box-sizing: border-box;
+    .nav {
+        box-sizing: border-box;
+        @include flex (row, start, center);
+        @media screen and (min-width: 700px) {
+            width: 500px;
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        display: none;
+    }
+}
+.icon {
+    box-sizing: border-box;
+    padding: 10px;
+    @include flex(column, center, center);
+    span {
+        color: $ocean-blue-medium;
+        font-size: 12px;
+        margin: 0;
+    }
+    img {
+        width: 50px;
+        margin: 0;
+    }
+}
+
+
+.horizontal__homeNav {
+    background: $ocean-blue-medium;
+    position: fixed;
+    display: flex;
     align-items: center;
-    background-color: #fff;
-    box-shadow: rgba(0,0,0,0.15) 0px -3px 8px;
-    -webkit-box-shadow: rgba(0,0,0,0.15) 0px -3px 8px;
-    -moz-box-shadow: rgba(0,0,0,0.15) 0px -3px 8px;
-
-    & > a  {
-        font-size: 0.75rem;
-        font-weight: 800;
-        color: $light-gray;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-
-        &:active {
-            color: $ocean-blue;
-           
-        }
-
-        &:hover {
-            color: $light-gray;
-        }
-    }
-}
-
-.inherit {
-    & > a:nth-child(1) {
-        color: $ocean-blue;
-    }
-}
-
-//Top location status header
-header {
-    background-color: $ocean-blue;
-    height: 4rem;
-    text-align: center;
-    top: 0;
-    z-index: 1;
-    position: fixed;
-    width: 100%;
-
-    & > div:nth-child(1){
-        color: #000;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-
-        @media (max-width: 769px){
-            margin-top: 2.5%;
-        }
-    }
-}
-
-//Real location string
-.location {
-    color: $gray;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-//Categories Carousel
-.carousel__category{
-    margin-top: 1.5%;
-    text-align: center;
-    justify-content: center;
-
-    @media (min-width: 320px) and (max-width: 369px){
-        margin-top: 25%;
-    }
-
-    @media (min-width: 370px ) and (max-width: 769px){
-        margin-top: 22%;
-    }
-}
-
-.carousel__pic {
-    width: 55px;
     height: 50px;
-    font-weight: 800;
-    cursor: pointer;
-
-    &-2 {
-        transform: rotate(45deg);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
+    top: 0;
+    width: 100%;
+    ul {
+        width: 700px;
+        @include flex (row, center, center);
     }
-
-    &-3 {
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
+    li {
+        display: inline;
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     }
-
-    &-4 {
-        width: 45px;
-        height: 50px;
-        cursor: pointer;
-    }
-
-    &-5 {
-        width: 45px;
-        height: 50px;
-        cursor: pointer;
+    @media screen and (max-width: 1000px) {
+        display: none;
     }
 }
 
-// Item description
-figcaption {
-    font-size: 0.75rem;
-    font-weight: 800;
-    cursor: pointer;
-}
-
-// Main Banner Home stylign
-.main__banner {
-    border-radius: 10px;
-
-    @media (min-width: 370px ) and (max-width: 769px){
-        margin-top: 5%;
-        height: 11rem;
-        width: 85%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.home__direction__container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    background: $ocean-blue;
+    @include flex(column, center, center);
+    border-bottom: 1.5px solid $ocean-blue-medium;
+    span {
+        font-weight: bold;
+        color: $ocean-blue-dark;
     }
-
-    @media (min-width: 320px) and (max-width: 369px){
-        margin-top: 5%;
-        height: 9rem;
-        width: 85%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    p {
+        color: $gray;
     }
 }
 
-// Items row section
-.container {
+.main__container {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+    @media screen and (min-width: 1000px) {
+        margin-top: 50px;
+    }
+    .categories__carrousel {
+        width: 100%;
+        @include flex(row, center, start);
+        background: #eaeaea;
+        overflow: auto;
+        box-sizing: border-box;
+        padding: 5px 0;
+        
+    }
+    .interest__container {
+        margin-top: 10px;
+        width: 100%;
+        background: #eaeaea;
+        @include flex(row, center, start);
+        overflow: auto;
+        box-sizing: border-box;
+        padding: 10px 0;
+        margin-bottom: 100px;
+    }
+    .close__container {
+        margin-top: 10px;
+        width: 100%;
+        background: #eaeaea;
+        @include flex(row, start, start);
+        overflow: auto;
+        box-sizing: border-box;
+        padding: 10px 0;
+        @media screen and (min-width: 1000px) {
+            margin-bottom: 40px;
+        }
+        @media screen and (min-height: 400px) {
+            margin-bottom: 100px;
+        }
+    }
+    h3 {
+        margin-top: 20px;
+        width: 95%;
+        color: $ocean-blue-medium;
+        text-decoration: underline;
+    }
+}
+.carrousel--item {
+    min-width: 150px;
+    height: 100px;
+    background: $ocean-blue-medium;
+    border-radius: 5px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    padding: 10px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-top: 2%;
-
-    & > .item {
-        @media (min-width: 370px ) and (max-width: 769px){
-            width: 85px;
-            height: 85px;
-            border-radius: 5px;
-        }
-
-        @media (min-width: 320px) and (max-width: 369px){
-            width: 75px;
-            height: 75px;
-            border-radius: 5px;
-        }
+    h2 {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+    }
+    color: $ocean-blue-dark;
+    @media screen and (min-width: 1200px) {
+        min-width: 250px;
+        height: 150px;
     }
 }
 
-.products {
-    margin-top: 5%;
-
-    & > p {
-        font-size: 0.95rem;
-        font-weight: 600;
-        padding-left: 20px; 
+.carrosel--bigItem {
+    background: $light-gray;
+    min-width: 350px;
+    height: 300px;
+    border-radius: 5px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        @media screen and (min-width: 1000px) {
+            width: 450px;
+            height: 150px;
+        }
+    }
+    .bigItem--title {
+        text-decoration: none;
+        color: $ocean-blue-dark;
+        text-align: center;
+        overflow: hidden;
+    }
+    p {
+        color: $gray;
+        width: 100%;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;
+        overflow: hidden;
+        @media screen and (min-width: 1000px) {
+            font-size: 20px;
+        }
+    }
+    a {
+        overflow: hidden;
+        text-decoration: none;
+        color: $ocean-blue-medium;
+    }
+    a:hover {
+        color: $ocean-blue-light;
+    }
+    .bigItem--details {
+        color: $gray;
+    }
+    @media screen and (min-width: 1000px) {
+        width: 500px;
+        height: 350px;
     }
 }
+// ::-webkit-scrollbar {
+//     background: #eaeaea;
+// }
+// ::-webkit-scrollbar-button{
+//     display: none;
+// }
+// ::-webkit-scrollbar-thumb {
+//     background: $light-gray;
+//     border-radius: 15px;
+// }
+// ::-webkit-scrollbar-track {
+//     display: none;
+// }

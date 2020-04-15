@@ -34,5 +34,25 @@
     }
     form {
        @include form();
+       label {
+            color: $ocean-blue-medium;
+       }
+       input {
+           outline: none;
+       }
+       :hover {
+            color: $ocean-blue-medium;
+       }
+    }
+    a {
+        color: $ocean-blue-dark;
+        margin-top: 10px;
+        text-decoration: none;
+    }
+    :hover {
+        color: $ocean-blue;
+    }
+    :active {
+        color: $light-gray;
     }
 }

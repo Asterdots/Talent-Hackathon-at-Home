@@ -14,7 +14,9 @@
         <ul>
             <li><a href="/">Inicio</a></li>
             <li><a href="/search">Buscar</a></li>
-            <li><a href="/orders/<%= user.id %> ">Ordenes</a></li>
+            <% if (user.bussiness){ %>
+              <li><a href="/orders/<%= user.id %> ">Ordenes</a></li>
+            <% } %>
             <% if (user.bussiness) { %>
               <li><a href="/show-store/<%= user.id %>">Mi Cuenta</a></li>
             <% } else { %>
@@ -32,9 +34,10 @@
           <% for( let i = 0; i < orders.length; i++ ) { %>
             <div class="offer">
                 <h3>Nuevo Pedido</h3>
-                <span><img src="../assets/ProfileG.png" alt="">Cliente: <%= clients[i].name %></span>
+                <img src="../assets/ProfileG.png" alt="">
+                <span> Cliente: <%= clients[i].name %></span>
                 <P><%= orders[i].description %> </P>
-                <p><span>Entrega en: </span><%= clients[i].address %> </p>
+                <p><span id="offer--clientAdress">Entrega en: </span><%= clients[i].address %> </p>
                 <button class="button">Aceptar</button>
             </div>
           <% } %>
@@ -51,10 +54,12 @@
                   <a href="/search"><img src="../assets/SearchG.png" alt=""></a>
                   <span>Buscar</span>
               </div>
-              <div class="icon">
+              <% if (user.bussiness) {%>
+                <div class="icon">
                   <a href="/orders/<%= user.id %> "><img src="../assets/Order.png" alt=""></a>
                   <span>Ordenes</span>
               </div>
+              <% } %>
               <div class="icon">
                 <% if (user.bussiness) { %>
                   <a href="/show-store/<%= user.id %>" ><img src="/assets/ProfileG.png" alt=""></a>
