@@ -28,17 +28,17 @@
         <section class="main__container">
 
             <div class="categories__carrousel">
-                <div class="carrousel--item">
+                <div class="carrousel--item" id="Tienda">
                     <h2>Tiendas</h2>
                 </div>
-                <div class="carrousel--item">
+                <div class="carrousel--item" id="Farmacia">
                     <h2>Farmacias</h2>
                 </div>
-                <div class="carrousel--item">
+                <div class="carrousel--item" id="Ferre"> 
                     <h2>Ferreterías</h2>
                 </div>
-                <div class="carrousel--item">
-                    <h2>Mascotas</h2>
+                <div class="carrousel--item" id="Carne">
+                    <h2>Carnicería</h2>
                 </div>
             </div>
             
@@ -47,7 +47,7 @@
                 <% if (stores.length) { %>
                     <% stores.forEach(store => { %>
                      <div class="carrosel--bigItem">
-                         <img src="/assets/food.jpg" alt="">
+                         <img src="/assets/default.jpg" alt="">
                        <h3 class="bigItem--title"><%= store.bussiness %> </h3>
                        <div class="bigItem--details">
                            <p><%= store.description %></p>
@@ -59,32 +59,36 @@
             </div>
             <h3>Te puede interesar</h3>
             <div class="interest__container">
-                <div class="carrosel--bigItem">
-                    <h3 class="bigItem--title">Producto</h3>
-                    <p>Negocio</p>
-                    <div class="bigItem--details">
-                        <span>Price</span>
-                        <span>Categoría</span>
-                    </div>
-                </div>
 
                 <div class="carrosel--bigItem">
-                    <h3 class="bigItem--title">Producto</h3>
-                    <p>Negocio</p>
-                    <div class="bigItem--details">
-                        <span>Price</span>
-                        <span>Categoría</span>
-                    </div>
-                </div>
+                    <img src="/assets/paletas.jpg" alt="">
+                  <h3 class="bigItem--title">Paleta Zarzamora</h3>
+                  <div class="bigItem--details">
+                    <span>MX $18.00</span>
+                    <span>Comida</span>
+                  </div>
+                  <a href="#"></a>Ver más</a>
+              </div>
 
                 <div class="carrosel--bigItem">
-                    <h3 class="bigItem--title">Producto</h3>
-                    <p>Negocio</p>
-                    <div class="bigItem--details">
-                        <span>Price</span>
-                        <span>Categoría</span>
-                    </div>
-                </div>
+                    <img src="/assets/carpi.jpg" alt="">
+                  <h3 class="bigItem--title">Closet Madera</h3>
+                  <div class="bigItem--details">
+                    <span>MX $3 000.00</span>
+                    <span>Carpinterías</span>
+                  </div>
+                  <a href="#"></a>Ver más</a>
+              </div>
+
+                <div class="carrosel--bigItem">
+                    <img src="/assets/cajeta.jpg" alt="">
+                  <h3 class="bigItem--title">Cajeta 1lt</h3>
+                  <div class="bigItem--details">
+                    <span>MX $45.00</span>
+                    <span>Abarrotes</span>
+                  </div>
+                  <a href="#"></a>Ver más</a>
+              </div>
             </div>
             
             </div>

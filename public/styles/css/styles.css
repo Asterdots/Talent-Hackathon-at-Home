@@ -413,12 +413,17 @@
     background: #eaeaea;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-items: start;
     overflow: auto;
     box-sizing: border-box;
-    padding: 10px 0;
-    margin-bottom: 100px; }
+    padding: 10px 0; }
+    @media screen and (min-width: 1000px) {
+      .main__container .interest__container {
+        margin-bottom: 40px; } }
+    @media screen and (min-height: 400px) {
+      .main__container .interest__container {
+        margin-bottom: 100px; } }
   .main__container .close__container {
     margin-top: 10px;
     width: 100%;
@@ -511,6 +516,30 @@
     .carrosel--bigItem {
       width: 500px;
       height: 350px; } }
+
+#Tienda {
+  background: url(/assets/tienda.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white; }
+
+#Farmacia {
+  background: url(/assets/farma.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white; }
+
+#Ferre {
+  background: url(/assets/ferre.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white; }
+
+#Carne {
+  background: url(/assets/carne.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white; }
 
 .search__main {
   width: 100%; }
@@ -979,7 +1008,7 @@
   align-items: center; }
   .delivery__main .offer--list {
     padding: 20px 0 0 0;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     width: 100%;
     box-sizing: border-box;
     border-radius: 7px;

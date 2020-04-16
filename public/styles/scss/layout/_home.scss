@@ -98,11 +98,16 @@
         margin-top: 10px;
         width: 100%;
         background: #eaeaea;
-        @include flex(row, center, start);
+        @include flex(row, start, start);
         overflow: auto;
         box-sizing: border-box;
         padding: 10px 0;
-        margin-bottom: 100px;
+        @media screen and (min-width: 1000px) {
+            margin-bottom: 40px;
+        }
+        @media screen and (min-height: 400px) {
+            margin-bottom: 100px;
+        }
     }
     .close__container {
         margin-top: 10px;
@@ -203,6 +208,32 @@
         width: 500px;
         height: 350px;
     }
+}
+
+
+#Tienda {
+    background: url(/assets/tienda.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+#Farmacia {
+    background: url(/assets/farma.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+#Ferre {
+    background: url(/assets/ferre.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+#Carne {
+    background: url(/assets/carne.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
 }
 // ::-webkit-scrollbar {
 //     background: #eaeaea;
