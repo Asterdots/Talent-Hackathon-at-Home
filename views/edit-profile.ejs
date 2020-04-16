@@ -26,11 +26,6 @@
     <section class="user__edit">
          <form method="POST" enctype="multipart/form-data">
             <div class="user__form--nameInfo">
-                <% if (userDB.image) { %> 
-                  <div class="user--image">
-                    <img src="/uploads/profiles/<%= userDB.image %> " width="400px" alt="profile image">
-                  </div>
-                <% } %> 
                 <h3>Nombre</h3>
                 <input class="input" name ="name" type="text" value="<%= userDB.name %> " placeholder="Name">
                 <h3>Apellido</h3>
@@ -59,7 +54,7 @@
                   <span>Inicio</span>
               </div>
               <div class="icon">
-                  <a href="/search"><img src="../assets/Search.png" alt=""></a>
+                  <a href="/search"><img src="../assets/SearchG.png" alt=""></a>
                   <span>Buscar</span>
               </div>
               <% if (userDB.bussiness) {%>
