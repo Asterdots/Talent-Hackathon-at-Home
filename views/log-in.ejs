@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encartgo | Inicia sesión</title>
+    <link rel="stylesheet" href="/styles/css/styles.css">
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+</head>
+<body>
+    <% if (locals.messages) { %>
+      <% const category = Object.keys(locals.messages) %>
+      <% if (category.length) { %>
+          <% locals.messages[category].forEach(element => { %>
+              <p><%= element %></p> 
+          <% }) %>
+      <% } %>   
+    <% } %>  
+    <section class="login__main">
+        <img src="/assets/encartgo.png" alt="encartgo logo">
+        <h2>Iniciar sesión</h2>
+        <form action="" method="POST" class="login__main--form">
+            <label class="label" for="">Dirección de correo</label>
+            <input class="input" name="email" type="text" placeholder="example@mail.com" required>
+            <label class="label" for="">Contraseña</label>
+            <input class="input" name="password" type="password" placeholder="Contraseña" required>
+            <button class="button" type="submit">Iniciar sesión</button>
+        </form>
+        <a href="/create-account">¿No tienes cuenta? Crea una</a>
+    </section>
+
+</body>
+</html>

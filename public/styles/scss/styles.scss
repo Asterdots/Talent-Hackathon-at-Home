@@ -1,0 +1,28 @@
+//Components
+@import "components/inputsAndButtons";
+@import "components/logoAsterdots";
+@import "components/ordered";
+
+//Layout
+@import "layout/login";
+@import "layout/account";
+@import "layout/register";
+@import "layout/home";
+@import "layout/search";
+@import "layout/inventory";
+@import "layout/product";
+@import "layout/commerce";
+@import "layout/seller";
+@import "layout/delivery";
+
+// Colors
+@import "variables/colors";
+
+* {
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-family: 'JetBrains Mono';
+}
+
+
+

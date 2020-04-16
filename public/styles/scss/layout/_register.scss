@@ -1,0 +1,50 @@
+@import "../variables/colors";
+@mixin flex ($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-items: $justify;
+}
+@mixin form {
+    @include flex(column, center, center);
+    width: 90%;
+    height: auto;
+    @media screen and (min-width: 700px) {
+        width: 500px;
+    }
+}
+@mixin logmain {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 60px 0px;
+    @include flex(column, center, center);
+}
+.register__main {
+    @include logmain();
+    form {
+        @include form();
+        @media screen and (min-width: 700px) {
+            background: #eaeaeaea;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+    }
+    h2 {
+        margin-bottom: 60px;
+        font-size: 30px;
+        color: $ocean-blue;
+    }
+    a {
+        color: $ocean-blue-dark;
+        margin-top: 10px;
+        text-decoration: none;
+    }
+    :hover {
+        color: $ocean-blue;
+    }
+    :active {
+        color: $light-gray;
+    }
+}

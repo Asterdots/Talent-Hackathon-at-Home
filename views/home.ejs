@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encartgo | Bienvenidos!</title>
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+</head>
+<body>
+    <section class="home__main">
+        
+        <div class="horizontal__homeNav">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/search">Buscar</a></li>
+                <% if (user.bussiness){ %>
+                    <li><a href="/orders/<%= user.id %> ">Ordenes</a></li>
+                  <% } %>
+                <% if (user.bussiness) { %>
+                  <li><a href="/show-store/<%= user.id %>">Mi Cuenta</a></li>
+                <% } else { %>
+                  <li><a href="/show-profile/<%= user.id %>">Mi Cuenta</a></li>
+                <% } %> 
+            </ul>
+        </div>
+
+        <section class="main__container">
+
+            <div class="categories__carrousel">
+                <div class="carrousel--item" id="Tienda">
+                    <h2>Tiendas</h2>
+                </div>
+                <div class="carrousel--item" id="Farmacia">
+                    <h2>Farmacias</h2>
+                </div>
+                <div class="carrousel--item" id="Ferre"> 
+                    <h2>Ferreterías</h2>
+                </div>
+                <div class="carrousel--item" id="Carne">
+                    <h2>Carnicería</h2>
+                </div>
+            </div>
+            
+            <h3>Cerca de ti</h3>
+            <div class="close__container">
+                <% if (stores.length) { %>
+                    <% stores.forEach(store => { %>
+                     <div class="carrosel--bigItem">
+                         <img src="/assets/default.jpg" alt="">
+                       <h3 class="bigItem--title"><%= store.bussiness %> </h3>
+                       <div class="bigItem--details">
+                           <p><%= store.description %></p>
+                       </div>
+                       <a href="/show-store/<%= store.id %>">Ver más</a>
+                   </div>
+                    <% }) %>
+                   <% } %>
+            </div>
+            <h3>Te puede interesar</h3>
+            <div class="interest__container">
+
+                <div class="carrosel--bigItem">
+                    <img src="/assets/paletas.jpg" alt="">
+                  <h3 class="bigItem--title">Paleta Zarzamora</h3>
+                  <div class="bigItem--details">
+                    <span>MX $18.00</span>
+                    <span>Comida</span>
+                  </div>
+                  <a href="#"></a>Ver más</a>
+              </div>
+
+                <div class="carrosel--bigItem">
+                    <img src="/assets/carpi.jpg" alt="">
+                  <h3 class="bigItem--title">Closet Madera</h3>
+                  <div class="bigItem--details">
+                    <span>MX $3 000.00</span>
+                    <span>Carpinterías</span>
+                  </div>
+                  <a href="#"></a>Ver más</a>
+              </div>
+
+                <div class="carrosel--bigItem">
+                    <img src="/assets/cajeta.jpg" alt="">
+                  <h3 class="bigItem--title">Cajeta 1lt</h3>
+                  <div class="bigItem--details">
+                    <span>MX $45.00</span>
+                    <span>Abarrotes</span>
+                  </div>
+                  <a href="#"></a>Ver más</a>
+              </div>
+            </div>
+            
+            </div>
+        </section>
+    </section>
+
+    <section class="nav__main">
+        <nav class="nav">
+            <div class="icon">
+                <a href="/"><img src="../assets/Home.png" alt=""></a>
+                <span>Inicio</span>
+            </div>
+            <div class="icon">
+                <a href="/search"><img src="../assets/SearchG.png" alt=""></a>
+                <span>Buscar</span>
+            </div>
+            <% if (user.bussiness) {%>
+                <div class="icon">
+                  <a href="/orders/<%= user.id %> "><img src="../assets/OrderG.png" alt=""></a>
+                  <span>Ordenes</span>
+              </div>
+              <% } %>
+            <div class="icon">
+              <% if (user.bussiness) { %>
+                <a href="/show-store/<%= user.id %>" ><img src="/assets/ProfileG.png" alt=""></a>
+                <span>Mi Cuenta</span>
+              <% } else { %>
+                <a href="/show-profile/<%= user.id %> "><img src="/assets/ProfileG.png" alt=""></a>
+                <span>Profile</span>
+              <% } %> 
+            </div>
+        </nav>
+    </section>
+
+</body>
+</html>

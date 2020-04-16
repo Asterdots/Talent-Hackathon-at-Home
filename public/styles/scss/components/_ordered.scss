@@ -1,0 +1,22 @@
+.pedido {
+    background: $ocean-blue;
+    color: $ocean-blue-dark;
+    font-weight: bold;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.pedido:hover {
+    background: $ocean-blue-medium;
+}
+.pedido:active {
+    background: $ocean-blue-dark;
+    color: $ocean-blue;
+}

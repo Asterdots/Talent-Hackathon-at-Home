@@ -1,0 +1,250 @@
+.nav__main {
+    width: 100%;
+    border-top: 1.5px solid $ocean-blue;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    background: white;
+    z-index: 3;
+    margin-top: 40px;
+    box-sizing: border-box;
+    .nav {
+        box-sizing: border-box;
+        @include flex (row, start, center);
+        @media screen and (min-width: 700px) {
+            width: 500px;
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        display: none;
+    }
+}
+.icon {
+    box-sizing: border-box;
+    padding: 10px;
+    @include flex(column, center, center);
+    span {
+        color: $ocean-blue-medium;
+        font-size: 12px;
+        margin: 0;
+    }
+    img {
+        width: 50px;
+        margin: 0;
+    }
+}
+
+
+.horizontal__homeNav {
+    background: $ocean-blue-medium;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    top: 0;
+    width: 100%;
+    ul {
+        width: 700px;
+        @include flex (row, center, center);
+    }
+    li {
+        display: inline;
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+}
+
+.home__direction__container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    background: $ocean-blue;
+    @include flex(column, center, center);
+    border-bottom: 1.5px solid $ocean-blue-medium;
+    span {
+        font-weight: bold;
+        color: $ocean-blue-dark;
+    }
+    p {
+        color: $gray;
+    }
+}
+
+.main__container {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+    @media screen and (min-width: 1000px) {
+        margin-top: 50px;
+    }
+    .categories__carrousel {
+        width: 100%;
+        @include flex(row, center, start);
+        background: #eaeaea;
+        overflow: auto;
+        box-sizing: border-box;
+        padding: 5px 0;
+        
+    }
+    .interest__container {
+        margin-top: 10px;
+        width: 100%;
+        background: #eaeaea;
+        @include flex(row, start, start);
+        overflow: auto;
+        box-sizing: border-box;
+        padding: 10px 0;
+        @media screen and (min-width: 1000px) {
+            margin-bottom: 40px;
+        }
+        @media screen and (min-height: 400px) {
+            margin-bottom: 100px;
+        }
+    }
+    .close__container {
+        margin-top: 10px;
+        width: 100%;
+        background: #eaeaea;
+        @include flex(row, start, start);
+        overflow: auto;
+        box-sizing: border-box;
+        padding: 10px 0;
+        @media screen and (min-width: 1000px) {
+            margin-bottom: 40px;
+        }
+        @media screen and (min-height: 400px) {
+            margin-bottom: 100px;
+        }
+    }
+    h3 {
+        margin-top: 20px;
+        width: 95%;
+        color: $ocean-blue-medium;
+        text-decoration: underline;
+    }
+}
+.carrousel--item {
+    min-width: 150px;
+    height: 100px;
+    background: $ocean-blue-medium;
+    border-radius: 5px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+    }
+    color: $ocean-blue-dark;
+    @media screen and (min-width: 1200px) {
+        min-width: 250px;
+        height: 150px;
+    }
+}
+
+.carrosel--bigItem {
+    background: $light-gray;
+    min-width: 350px;
+    height: 300px;
+    border-radius: 5px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        @media screen and (min-width: 1000px) {
+            width: 450px;
+            height: 150px;
+        }
+    }
+    .bigItem--title {
+        text-decoration: none;
+        color: $ocean-blue-dark;
+        text-align: center;
+        overflow: hidden;
+    }
+    p {
+        color: $gray;
+        width: 100%;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;
+        overflow: hidden;
+        @media screen and (min-width: 1000px) {
+            font-size: 20px;
+        }
+    }
+    a {
+        overflow: hidden;
+        text-decoration: none;
+        color: $ocean-blue-medium;
+    }
+    a:hover {
+        color: $ocean-blue-light;
+    }
+    .bigItem--details {
+        color: $gray;
+    }
+    @media screen and (min-width: 1000px) {
+        width: 500px;
+        height: 350px;
+    }
+}
+
+
+#Tienda {
+    background: url(/assets/tienda.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+#Farmacia {
+    background: url(/assets/farma.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+#Ferre {
+    background: url(/assets/ferre.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+#Carne {
+    background: url(/assets/carne.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+// ::-webkit-scrollbar {
+//     background: #eaeaea;
+// }
+// ::-webkit-scrollbar-button{
+//     display: none;
+// }
+// ::-webkit-scrollbar-thumb {
+//     background: $light-gray;
+//     border-radius: 15px;
+// }
+// ::-webkit-scrollbar-track {
+//     display: none;
+// }

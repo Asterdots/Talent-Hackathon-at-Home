@@ -1,0 +1,50 @@
+@import "../variables/colors";
+
+@mixin inputAndButtonAttributes($width, $height, $padding, $bg, $border) {
+    width: $width;
+    height: $height;
+    padding: $padding;
+    border: none;
+    background: $bg;
+    border-radius: $border;
+}
+
+.label {
+    font-size: 20px;
+    text-align: justify;
+    width: 100%;
+    padding-left: 4px;
+    font-weight: bold;
+}
+.input {
+    @include inputAndButtonAttributes(100%, 50px, 16px 0, $light-gray, 2px);
+    margin: 10px 0 50px 0;
+    outline: none;
+    box-sizing: border-box;
+    color: $gray;
+    padding: 0 15px;
+}
+::placeholder {
+    font-size: 14px;
+    color: $gray;
+}
+.button {
+    @include inputAndButtonAttributes(100%, auto, 16px 0, $ocean-blue, 15px);
+     font-weight: bold;
+     outline: none;
+     font-size: 15px;
+     color: $ocean-blue-dark;
+     @media screen and (min-width: 700px) {
+        width: auto;
+        padding: 16px 36px;
+    }
+    
+}
+.button:hover {
+        background: $ocean-blue-light;
+        color: white;
+}
+.button:active {
+    background: $light-gray;
+    color: $ocean-blue;
+}

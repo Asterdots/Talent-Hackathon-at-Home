@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encartgo | Buscar</title>
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+</head>
+<body>
+    <div class="horizontal__homeNav">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/search">Buscar</a></li>
+            <% if (user.bussiness){ %>
+                <li><a href="/orders/<%= user.id %> ">Ordenes</a></li>
+              <% } %>
+            <% if (user.bussiness) { %>
+              <li><a href="/show-store/<%= user.id %>">Mi Cuenta</a></li>
+            <% } else { %>
+              <li><a href="/show-profile/<%= user.id %>">Mi Cuenta</a></li>
+            <% } %> 
+        </ul>
+    </div>
+
+    <section class="search__main">
+        <div class="search__main--container">
+          <img src="/assets/encartgo.png" alt="encartgo logo">
+          <h2>¿Buscabas algo?</h2>
+          <div class="search--input">
+            <input type="text" placeholder="Estoy buscando...">
+          </div>
+        </div>
+    </section>
+
+    <section class="nav__main">
+        <nav class="nav">
+            <div class="icon">
+                <a href="/"><img src="../assets/HomeG.png" alt=""></a>
+                <span>Inicio</span>
+            </div>
+            <div class="icon">
+                <a href="/search"><img src="../assets/Search.png" alt=""></a>
+                <span>Buscar</span>
+            </div>
+            <% if (user.bussiness) {%>
+                <div class="icon">
+                  <a href="/orders/<%= user.id %> "><img src="../assets/OrderG.png" alt=""></a>
+                  <span>Ordenes</span>
+              </div>
+              <% } %>
+            <div class="icon">
+              <% if (user.bussiness) { %>
+                <a href="/show-store/<%= user.id %>" ><img src="/assets/ProfileG.png" alt=""></a>
+                <span>Mi Cuenta</span>
+              <% } else { %>
+                <a href="/show-profile/<%= user.id %> "><img src="/assets/ProfileG.png" alt=""></a>
+                <span>Profile</span>
+              <% } %> 
+            </div>
+        </nav>
+    </section>
+
+</body>
+</html>

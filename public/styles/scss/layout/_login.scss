@@ -1,0 +1,58 @@
+@import "../variables/colors";
+@mixin flex ($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-items: $justify;
+}
+@mixin form {
+    @include flex(column, center, center);
+    width: 90%;
+    height: auto;
+    @media screen and (min-width: 700px) {
+        width: 500px;
+    }
+}
+@mixin logmain {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 60px 0px;
+    @include flex(column, center, center)
+}
+
+.login__main {
+    @include logmain();
+    img {
+        margin-bottom: 60px;
+        width: 300px;
+    }
+    h2 {
+        color: $ocean-blue-medium;
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+    form {
+       @include form();
+       label {
+            color: $ocean-blue-medium;
+       }
+       input {
+           outline: none;
+       }
+       :hover {
+            color: $ocean-blue-medium;
+       }
+    }
+    a {
+        color: $ocean-blue-dark;
+        margin-top: 10px;
+        text-decoration: none;
+    }
+    :hover {
+        color: $ocean-blue;
+    }
+    :active {
+        color: $light-gray;
+    }
+}

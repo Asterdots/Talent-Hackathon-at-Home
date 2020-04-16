@@ -1,0 +1,71 @@
+@import "../components/ordered";
+
+.seller__main {
+    width: 100%;
+    h2 {
+        width: 95%;
+        margin-top: 30px;
+        color: $ocean-blue-dark;
+        text-decoration: underline;
+        @media screen and (min-width:700px) {
+            width: 500px;
+            text-align: center;
+        }
+    }
+    .pedido__container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background: #eaeaea;
+        border-radius: 7px;
+        width: 95%;
+        box-sizing: border-box;
+        padding: 10px 10px 0 10px;
+        h3 {
+            color: $ocean-blue-medium;
+            text-decoration: underline;
+        }
+        @media screen and (min-width:700px) {
+            width: 600px;
+            margin-top: 50px;
+        }
+    }
+    .pedidoInfo__container{
+        width: 95%;
+        background: #eaeaea;
+        border-radius: 7px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-bottom: 30px;
+        h3 {
+            color: $ocean-blue-medium;
+            text-decoration: underline;
+            margin-bottom: 15px;
+        }
+        p {
+            color: $gray;
+            margin: 5px 0;
+        }
+        .seller__buttons {
+            margin-top: 15px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            :last-child {
+                margin-top: 10px;
+            }
+            @media screen and (min-width:1000px) {
+                flex-direction: row;
+            }
+        }
+        @media screen and (min-width:700px) {
+            width: 600px;
+            margin-top: 50px;
+        }
+    }
+
+}
+.hidden {
+    display: none;
+}

@@ -1,0 +1,112 @@
+@import "../variables/colors";
+
+.inventory__main {
+    width: 100%;
+    padding: 30px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    h2 {
+        color: $ocean-blue;
+        margin-bottom: 30px;
+        grid-area: title;
+    }
+    .inventory__main--list{
+        grid-area: inventory;
+        background: #eaeaea;
+        border-radius: 15px;
+        box-sizing: border-box;
+        padding: 20px 0;
+        width: 95%;
+        margin-bottom: 20px;
+        overflow-y: auto;
+        @media screen and (min-width: 700px) {
+            width: 500px;
+        }
+        @media screen and (min-width: 1000px) {
+            position: relative;
+            width: 90%;
+        }
+        .product {
+            background-color: $ocean-blue-light;
+            width: 90%;
+            display: flex;
+            margin-top: 10px;
+            border-radius: 10px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 15px;
+            h3 {
+                color: $ocean-blue-dark;
+            }
+            p {
+                color: $ocean-blue-medium;
+                margin: 10px 0;
+            }
+        }
+    }
+    button {
+        width: 90%;
+        grid-area: button;
+        @media screen and (min-width: 700px) {
+            width: auto;
+            padding: 16px 36px;
+        }
+    }
+    .inventory__main--form{
+        grid-area: form;
+        background: #eaeaea;
+        padding: 20px;
+        box-sizing: border-box;
+        // position: absolute;
+        bottom: 0;
+        border-top: 3px solid $ocean-blue-light;
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h3 {
+            margin-bottom: 20px;
+            color: $ocean-blue-dark;
+        }
+        form {
+            width: 90%;
+            :last-child {
+                background: $ocean-blue-medium;
+            }
+            @media screen and (min-width: 700px) {
+                width: 600px;
+            }
+        }
+        button {
+            width: 100%;
+            margin-bottom: 20px;
+            @media screen and (min-width: 700px) {
+                width: auto;
+                padding: 16px 36px;
+            }
+        }
+        @media screen and (min-width: 1000px) {
+            position: relative;
+            width: 90%;
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        display: grid;
+        grid-template: 40px 1fr 100px/ 40% 60%;
+        grid-template-areas: "title title" "inventory form" "button form";
+    }
+}
+.price {
+    color: $ocean-blue-dark;
+    font-weight: bold;
+    font-size: 15px;
+}
+.hidden {
+    display: none;
+}

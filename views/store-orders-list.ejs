@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encartgo | Vendedor</title>
+    <link rel="stylesheet" href="/styles/css/styles.css">
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+</head>
+<body>
+    <section class="seller__main">
+            <h2>Nombre Negocio</h2>
+            <div class="pedido__container">
+                <h3>Pedidos</h3>
+                <div class="pedido" onclick="showPanel()">
+                    <p>Pedido No. 405096</p>
+                </div>
+                <div class="pedido" onclick="showPanel()">
+                    <p>Pedido No. 40SD4D</p>
+                </div>
+            </div>
+            <div class="hidden" id="sell">
+                <div class="pedidoInfo">
+                    <h3 id="No">Pedido No.405096</h3>
+                    <p>Item</p>
+                    <p>Item</p>
+                    <p>Item</p>
+                    <p>Item</p>
+                </div>
+                <div class="seller__buttons">
+                    <button class="button" onclick="hidePanel()">Yo lo llevo</button>
+                    <button class="button" onclick="hidePanel()">Solicitar envío</button>
+                </div>
+            </div>
+    </section>
+    <script src="/js/seller.js"></script>
+</body>
+</html>

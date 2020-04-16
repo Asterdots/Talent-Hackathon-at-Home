@@ -1,0 +1,51 @@
+.delivery__main {
+    width: 100%;
+    @include flex(column, center, center);
+    .offer--list {
+        padding: 20px 0 0 0;
+        margin-bottom: 100px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 7px;
+        h2 {
+            font-size: 20px;
+            width: 100%;
+            @include flex (column, center, center);
+            height: 30px;
+            text-decoration: underline;
+            color: $ocean-blue-dark;
+        }
+        @include flex (column, center, center);
+        @media screen and (min-width: 1000px) {
+            margin-top: 55px;
+        }
+    }
+    
+}
+.offer {
+    width: 90%;
+    border-radius: 10px;
+    background: $light-gray;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 20px 0;
+    @include flex (column, center, center);
+    h3 {
+        color: $ocean-blue-medium;
+    }
+    img {
+        width: 50%;
+    }
+    span {
+        font-weight: bold;
+        color: $ocean-blue-medium;
+    }
+    #offer--clientAdress {
+        color: $gray;
+    }
+    @media screen and (min-width: 700px) {
+        width: 500px;
+        height: 450px;
+        border-radius: 25px;
+    }
+}
