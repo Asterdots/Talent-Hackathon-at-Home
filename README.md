@@ -2,6 +2,8 @@
 
 [Vídeo demo mostrando nuestra aplicación](https://www.youtube.com/watch?v=aBUzIoNpl58&feature=youtu.be "Encartgo")
 
+[Presentación de diapositivas](https://drive.google.com/file/d/1O8AFT1gsTCU2xZcg5s84zaKHoQAObdgV/view "Encartgo")
+
 [Descripción general del proyecto](https://drive.google.com/drive/folders/1fLKhaHupwq8reOTEhRVencUV5oAW8U8C "Encartgo")
 
 ## Configuración de la aplicación
